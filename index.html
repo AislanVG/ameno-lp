@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ameno IA | A Inteligência Operacional dos Maiores Escritórios</title>
+    <!-- Tailwind CSS (via CDN para desenvolvimento rápido) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuração da nossa Paleta de Cores (Design System) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ameno: {
+                            fundo: '#0B132B',       /* Azul Meia-Noite Profundo */
+                            card: '#0F172A',        /* Grafite Oceânico */
+                            cyan: '#38BDF8',        /* Cyan Sereno (Bordas/Hover) */
+                            safira: '#2563EB',      /* Azul Safira */
+                            esmeralda: '#10B981',   /* CTA Principal */
+                            esmeraldaHover: '#059669',
+                            gelo: '#F8FAFC',        /* Textos H1/H2 */
+                            prata: '#94A3B8'        /* Textos P */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos adicionais para as sanfonas de FAQ */
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+    </style>
+</head>
+<body class="bg-ameno-fundo text-ameno-gelo font-sans antialiased selection:bg-ameno-cyan selection:text-ameno-fundo">
+
+    <!-- CABEÇALHO (Navbar) -->
+    <header class="fixed w-full top-0 z-50 bg-ameno-fundo/80 backdrop-blur-md border-b border-ameno-card">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-tight">
+                AMENO<span class="text-ameno-esmeralda">.IA</span>
+            </div>
+            <nav class="hidden md:flex space-x-8 text-ameno-prata text-sm font-semibold">
+                <a href="#solucoes" class="hover:text-ameno-gelo transition">Soluções</a>
+                <a href="#governanca" class="hover:text-ameno-gelo transition">Governança</a>
+                <a href="#faq" class="hover:text-ameno-gelo transition">FAQ</a>
+            </nav>
+            <a href="https://app.ameno.ia.br" class="hidden md:inline-block border border-ameno-prata/30 text-ameno-gelo px-5 py-2 rounded-lg text-sm font-semibold hover:bg-ameno-card transition">
+                Acessar Plataforma
+            </a>
+        </div>
+    </header>
+
+    <!-- PRIMEIRA DOBRA (Hero Section) -->
+    <section class="pt-40 pb-20 px-6 max-w-5xl mx-auto text-center flex flex-col items-center">
+        <span class="text-ameno-cyan text-sm font-semibold tracking-wider uppercase mb-4 border border-ameno-cyan/30 bg-ameno-cyan/10 px-4 py-1 rounded-full">
+            Inteligência Corporativa
+        </span>
+        <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+            Escale a capacidade do seu escritório. <br class="hidden md:block">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-ameno-gelo to-ameno-prata">Sem inchar a folha de pagamento.</span>
+        </h1>
+        <p class="text-lg md:text-xl text-ameno-prata max-w-3xl mb-10 leading-relaxed">
+            A Ameno IA automatiza análises complexas, blinda a conformidade dos seus dados e aumenta a margem de lucro operacional. O poder de execução de uma grande equipe, com o controle nas mãos dos seus sócios.
+        </p>
+        <a href="#contato" class="bg-ameno-esmeralda hover:bg-ameno-esmeraldaHover text-white px-8 py-4 rounded-xl font-bold text-lg shadow-[0_0_20px_rgba(16,185,129,0.3)] transition transform hover:-translate-y-1">
+            Agendar Diagnóstico Estratégico
+        </a>
+        <p class="mt-4 text-sm text-ameno-prata/70">✔ Conformidade total com a LGPD e sigilo absoluto.</p>
+    </section>
+
+    <!-- SEÇÃO DO PRODUTO (O Bento Grid) -->
+    <section id="solucoes" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4">Governança e Precisão em um Único Ecossistema</h2>
+            <p class="text-ameno-prata">Módulos integrados para o fluxo contínuo do contencioso.</p>
+        </div>
+
+        <!-- Início da Grade (Bento Grid) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <!-- Card 1: Foco em Iniciais (Maior, ocupa 2 colunas no desktop) -->
+            <div class="md:col-span-2 bg-ameno-card p-8 rounded-2xl border border-white/5 hover:border-ameno-cyan/50 transition duration-300 group">
+                <div class="w-12 h-12 bg-ameno-safira/20 rounded-lg flex items-center justify-center mb-6 border border-ameno-safira/30 group-hover:bg-ameno-safira/40 transition">
+                    <svg class="w-6 h-6 text-ameno-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-3">Automação Contínua: Da Reunião à Petição Inicial.</h3>
+                <p class="text-ameno-prata leading-relaxed">
+                    A IA transcreve a reunião com o cliente e extrai os fatos. Basta anexar as provas documentais e a plataforma estrutura a Petição Inicial completa (Fatos, Fundamentos e Pedidos) em minutos, pronta para a revisão estratégica do sócio.
+                </p>
+            </div>
+
+            <!-- Card 2: Pesquisa (Ocupa 1 coluna) -->
+            <div class="md:col-span-1 bg-ameno-card p-8 rounded-2xl border border-white/5 hover:border-ameno-cyan/50 transition duration-300 group">
+                <div class="w-12 h-12 bg-ameno-safira/20 rounded-lg flex items-center justify-center mb-6 border border-ameno-safira/30 group-hover:bg-ameno-safira/40 transition">
+                    <svg class="w-6 h-6 text-ameno-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Pesquisa Jurisprudencial Analítica.</h3>
+                <p class="text-ameno-prata leading-relaxed">
+                    Nossa calibração avançada varre as bases e cruza informações para entregar teses jurídicas vencedoras e precedentes precisos, eliminando as horas gastas em buscadores genéricos.
+                </p>
+            </div>
+
+            <!-- Card 3: Governança (Largo embaixo) -->
+            <div id="governanca" class="md:col-span-3 bg-ameno-card p-8 rounded-2xl border border-white/5 hover:border-ameno-cyan/50 transition duration-300 group flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-2/3 mb-6 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-3">Controle Centralizado e Sigilo Absoluto.</h3>
+                    <p class="text-ameno-prata leading-relaxed">
+                        Ambientes de dados isolados para o seu escritório. Governança total sobre a entrada de documentos probatórios e a saída de peças jurídicas. Seus dados não treinam modelos públicos.
+                    </p>
+                </div>
+                <div class="md:w-1/3 flex justify-end">
+                    <div class="w-16 h-16 bg-ameno-fundo rounded-full flex items-center justify-center border-4 border-ameno-card">
+                         <svg class="w-8 h-8 text-ameno-esmeralda" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ e RODAPÉ (Simplificado para o Esqueleto) -->
+    <section id="faq" class="py-20 px-6 max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold mb-10 text-center">Perguntas Frequentes</h2>
+        <div class="space-y-4">
+            <details class="bg-ameno-card rounded-lg p-6 border border-white/5 cursor-pointer">
+                <summary class="font-semibold text-lg flex justify-between">A Ameno vai substituir a minha equipe de advogados? <span class="text-ameno-cyan">+</span></summary>
+                <p class="text-ameno-prata mt-4">Não. A Ameno IA faz o trabalho de triagem braçal e cruzamento de dados volumosos. O foco é acelerar a estruturação para que o advogado sênior gaste seu tempo apenas com a estratégia e a aprovação final.</p>
+            </details>
+            <details class="bg-ameno-card rounded-lg p-6 border border-white/5 cursor-pointer">
+                <summary class="font-semibold text-lg flex justify-between">Como garantem o sigilo das informações? <span class="text-ameno-cyan">+</span></summary>
+                <p class="text-ameno-prata mt-4">Utilizamos bancos de dados isolados e criptografia. Nenhuma informação de clientes ou teses do escritório são utilizadas para treinar modelos externos. O sigilo profissional é a base do nosso software.</p>
+            </details>
+        </div>
+    </section>
+
+    <footer class="border-t border-ameno-card mt-20 py-10 text-center text-ameno-prata text-sm">
+        <p>&copy; 2026 Ameno IA. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
