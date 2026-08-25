@@ -28,11 +28,10 @@
             }
         }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         details > summary { list-style: none; }
         details > summary::-webkit-details-marker { display: none; }
-        /* Gradiente animado sutil para mockups de UI */
         .bg-animated-gradient {
             background: linear-gradient(-45deg, #0B132B, #0F172A, #1e293b, #0B132B);
             background-size: 400% 400%;
@@ -47,252 +46,257 @@
 </head>
 <body class="bg-ameno-fundo text-ameno-gelo font-sans antialiased selection:bg-ameno-cyan selection:text-ameno-fundo">
 
-    <!-- CABEÇALHO (Navbar) -->
+    <!-- CABEÇALHO -->
     <header class="fixed w-full top-0 z-50 bg-ameno-fundo/90 backdrop-blur-lg border-b border-white/5">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-extrabold tracking-tight">
+            <div class="text-xl font-bold tracking-tight">
                 AMENO<span class="text-ameno-esmeralda">.IA</span>
             </div>
-            <nav class="hidden md:flex space-x-8 text-ameno-prata text-sm font-semibold">
+            <nav class="hidden md:flex space-x-8 text-ameno-prata text-sm font-medium">
                 <a href="#solucoes" class="hover:text-white transition">Ecossistema</a>
                 <a href="#fluxo" class="hover:text-white transition">Como Funciona</a>
-                <a href="#seguranca" class="hover:text-white transition">Governança</a>
-                <a href="#faq" class="hover:text-white transition">FAQ</a>
+                <a href="#faq" class="hover:text-white transition">Governança</a>
             </nav>
             <div class="hidden md:flex items-center space-x-4">
-                <a href="#orcamento" class="text-sm font-semibold text-ameno-prata hover:text-white transition border border-white/10 px-4 py-2 rounded-lg">Orçamento Especializado</a>
-                <a href="#contato" class="bg-ameno-esmeralda hover:bg-ameno-esmeraldaHover text-white px-5 py-2 rounded-lg text-sm font-bold shadow-[0_0_15px_rgba(16,185,129,0.2)] transition">
+                <a href="#orcamento" class="text-sm font-medium text-ameno-prata hover:text-white transition border border-white/10 px-4 py-2 rounded-lg">Orçamento</a>
+                <a href="#contato" class="bg-ameno-esmeralda hover:bg-ameno-esmeraldaHover text-white px-5 py-2 rounded-lg text-sm font-semibold shadow-[0_0_15px_rgba(16,185,129,0.2)] transition">
                     Agendar Demonstração
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- HERO SECTION (Dobra 1) -->
-    <section class="relative pt-48 pb-24 px-6 max-w-7xl mx-auto text-center md:text-left flex flex-col items-center z-10 overflow-hidden">
-        <!-- Elemento de Fundo Decorativo -->
-        <div class="absolute top-20 left-1/2 -translate-x-1/2 md:translate-x-0 md:left-auto md:right-0 w-[600px] h-[600px] bg-ameno-safira/20 blur-[120px] rounded-full pointer-events-none"></div>
+    <!-- HERO SECTION (Refinada, Alinhada à Esquerda e Sofisticada) -->
+    <section class="relative pt-40 pb-20 px-6 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 z-10 min-h-[90vh]">
+        <!-- Fundo Decorativo Sutil -->
+        <div class="absolute top-1/4 left-0 w-[500px] h-[500px] bg-ameno-safira/10 blur-[120px] rounded-full pointer-events-none"></div>
 
-        <div class="md:w-3/5 z-10">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-ameno-card border border-white/10 text-ameno-cyan text-xs font-bold uppercase tracking-wider mb-6">
-                <span class="w-2 h-2 rounded-full bg-ameno-esmeralda animate-pulse"></span>
-                Plataforma Enterprise Exclusiva para Sócios
+        <!-- Conteúdo de Texto -->
+        <div class="md:w-1/2 text-left z-10 pt-10 md:pt-0">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-ameno-cyan text-[11px] font-semibold uppercase tracking-widest mb-6">
+                <span class="w-1.5 h-1.5 rounded-full bg-ameno-esmeralda animate-pulse"></span>
+                Plataforma Enterprise
             </div>
-            <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 leading-[1.1] max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-6 leading-[1.2]">
                 Da reunião com o cliente à <br />
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-ameno-cyan to-ameno-gelo">petição inicial em tempo recorde.</span>
             </h1>
-            <p class="text-lg md:text-xl text-ameno-prata mb-10 leading-relaxed max-w-2xl mx-auto text-center">
+            <p class="text-base md:text-lg text-ameno-prata mb-8 leading-relaxed max-w-lg">
                 A Suíte Ameno integra a captura de atas de reuniões com a redação jurídica avançada. Elimine alucinações da IA e use a jurisprudência exata que seu escritório precisa.
             </p>
             
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#contato" class="bg-ameno-esmeralda hover:bg-ameno-esmeraldaHover text-white px-8 py-4 rounded-xl font-bold text-lg shadow-[0_0_30px_rgba(16,185,129,0.3)] transition transform hover:-translate-y-1 text-center">
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#contato" class="bg-ameno-esmeralda hover:bg-ameno-esmeraldaHover text-white px-6 py-3 rounded-lg font-semibold text-sm md:text-base shadow-[0_0_20px_rgba(16,185,129,0.2)] transition text-center">
                     Agendar Demonstração
                 </a>
-                <a href="#orcamento" class="bg-ameno-card hover:bg-white/5 border border-white/10 text-white px-8 py-4 rounded-xl font-bold text-lg transition text-center flex items-center justify-center gap-2">
-                    Solicitar Orçamento Personalizado
+                <a href="#orcamento" class="bg-ameno-card hover:bg-white/5 border border-white/10 text-white px-6 py-3 rounded-lg font-semibold text-sm md:text-base transition text-center">
+                    Orçamento Personalizado
                 </a>
             </div>
 
-            <!-- Trust Badges -->
-            <div class="mt-10 flex flex-wrap justify-center gap-8 text-sm text-ameno-prata/80 font-medium">
+            <!-- Trust Badges (Menores e mais delicados) -->
+            <div class="mt-8 flex flex-wrap gap-6 text-xs text-ameno-prata/70 font-medium">
                 <div class="flex items-center gap-2">
-                    <svg class="w-5 h-5 text-ameno-esmeralda" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    <svg class="w-4 h-4 text-ameno-esmeralda" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                     Conformidade LGPD
                 </div>
                 <div class="flex items-center gap-2">
-                    <svg class="w-5 h-5 text-ameno-esmeralda" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                    <svg class="w-4 h-4 text-ameno-esmeralda" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
                     Criptografia AES-256
                 </div>
             </div>
         </div>
 
-        <!-- Mockup Visual -->
-        <div class="hidden md:block md:w-2/5 z-10 relative">
-            <div class="w-full aspect-[4/5] bg-ameno-card border border-white/10 rounded-2xl p-6 shadow-2xl relative overflow-hidden bg-animated-gradient">
-                <div class="absolute inset-0 bg-ameno-fundo/40 backdrop-blur-[2px]"></div>
-                <div class="relative z-10 space-y-4">
-                    <div class="w-full h-8 bg-white/5 rounded flex items-center px-4"><span class="w-2 h-2 rounded-full bg-ameno-cyan animate-pulse mr-2"></span> Processando transcrição AtaPrime...</div>
-                    <div class="w-3/4 h-4 bg-white/5 rounded"></div>
-                    <div class="w-5/6 h-4 bg-white/5 rounded"></div>
-                    <div class="w-full h-24 bg-ameno-safira/10 border border-ameno-safira/30 rounded flex items-center justify-center text-ameno-cyan text-sm font-semibold">Cruzando Jurisprudência DataJud JusPrime</div>
-                    <div class="w-full h-32 bg-ameno-esmeralda/10 border border-ameno-esmeralda/30 rounded mt-4 p-4">
-                        <div class="w-1/2 h-4 bg-ameno-esmeralda/50 rounded mb-2"></div>
-                        <div class="w-full h-3 bg-white/10 rounded mb-2"></div>
-                        <div class="w-4/5 h-3 bg-white/10 rounded"></div>
+        <!-- Mockup Visual de Interface (Direita) -->
+        <div class="hidden md:block md:w-1/2 z-10 relative">
+            <div class="w-full aspect-square md:aspect-[4/3] bg-ameno-card/50 border border-white/10 rounded-2xl p-8 shadow-2xl relative overflow-hidden bg-animated-gradient backdrop-blur-sm">
+                <div class="absolute inset-0 bg-ameno-fundo/40"></div>
+                <div class="relative z-10 space-y-5">
+                    <div class="flex items-center justify-between border-b border-white/10 pb-4">
+                        <div class="flex gap-2">
+                            <div class="w-3 h-3 rounded-full bg-white/20"></div>
+                            <div class="w-3 h-3 rounded-full bg-white/20"></div>
+                        </div>
+                        <div class="text-[10px] text-ameno-prata font-mono uppercase">Ameno Workspace</div>
+                    </div>
+                    <div class="w-full h-10 bg-white/5 rounded-lg flex items-center px-4 text-sm text-ameno-prata">
+                        <span class="w-2 h-2 rounded-full bg-ameno-cyan animate-pulse mr-3"></span> Módulo AtaPrime AI ativo...
+                    </div>
+                    <div class="space-y-2 pl-4 border-l border-white/10">
+                        <div class="w-3/4 h-3 bg-white/5 rounded"></div>
+                        <div class="w-1/2 h-3 bg-white/5 rounded"></div>
+                    </div>
+                    <div class="w-full p-4 bg-ameno-esmeralda/10 border border-ameno-esmeralda/20 rounded-lg mt-6">
+                        <div class="flex items-center gap-3 mb-3">
+                            <svg class="w-5 h-5 text-ameno-esmeralda" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-sm font-medium text-ameno-esmeralda">JusPrime AI: Petição Estruturada</span>
+                        </div>
+                        <div class="w-full h-2 bg-white/10 rounded mb-2"></div>
+                        <div class="w-4/5 h-2 bg-white/10 rounded"></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FLUXO DE TRABALHO (Zigue-Zague/Storytelling) -->
+    <!-- FLUXO DE TRABALHO (Zigue-Zague com Espaço para os Prints Reais) -->
     <section id="fluxo" class="py-24 px-6 bg-ameno-card/30 border-y border-white/5">
-        <div class="max-w-7xl mx-auto space-y-32">
+        <div class="max-w-7xl mx-auto space-y-24">
             
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Hiperautomação do Contencioso</h2>
-                <p class="text-ameno-prata text-lg">O fluxo de hiperautomação contínua e sem fricção.</p>
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold mb-4">Hiperautomação do Contencioso</h2>
+                <p class="text-ameno-prata text-base">O fluxo contínuo e sem fricção projetado para escritórios de alta performance.</p>
             </div>
 
             <!-- Passo 1 -->
-            <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="flex flex-col md:flex-row items-center gap-16">
                 <div class="md:w-1/2">
-                    <div class="w-12 h-12 bg-ameno-safira/20 rounded-xl flex items-center justify-center mb-6 text-ameno-cyan border border-ameno-safira/30 text-xl font-bold">1</div>
-                    <h3 class="text-3xl font-bold mb-4">AtaPrime AI captura a reunião.</h3>
-                    <p class="text-ameno-prata text-lg leading-relaxed mb-6">
+                    <div class="w-10 h-10 bg-ameno-safira/20 rounded-lg flex items-center justify-center mb-6 text-ameno-cyan border border-ameno-safira/30 text-lg font-bold">1</div>
+                    <h3 class="text-2xl font-bold mb-4">AtaPrime AI captura a reunião.</h3>
+                    <p class="text-ameno-prata text-base leading-relaxed">
                         Muito além de transcrever áudio. O aplicativo documenta toda a conversa com o cliente, entende o contexto jurídico e extrai os principais pontos de ação e fatos relevantes para alimentar a petição seguinte.
                     </p>
                 </div>
                 <div class="md:w-1/2 w-full">
-                     <!-- AQUI VOCÊ VAI COLAR O LINK DO PRIMEIRO MOCKUP (ATA) -->
-                     <img src="https://via.placeholder.com/600x400/0F172A/38BDF8?text=Mockup+AtaPrime" alt="Transcrição de Reunião" class="w-full h-auto rounded-2xl shadow-[0_0_40px_rgba(37,99,235,0.15)] border border-white/10 object-cover">
+                     <!-- AQUI ENTRARÁ SUA IMAGEM DO NANOBANANA/CANVA -->
+                     <img src="https://via.placeholder.com/600x400/0F172A/38BDF8?text=Mockup+AtaPrime" alt="Transcrição de Reunião" class="w-full h-auto rounded-xl shadow-[0_0_30px_rgba(37,99,235,0.1)] border border-white/10 object-cover">
                 </div>
             </div>
 
             <!-- Passo 2 & 3 -->
-            <div class="flex flex-col md:flex-row-reverse items-center gap-12">
+            <div class="flex flex-col md:flex-row-reverse items-center gap-16">
                 <div class="md:w-1/2">
-                    <div class="flex gap-4 mb-6">
-                        <div class="w-12 h-12 bg-ameno-safira/20 rounded-xl flex items-center justify-center text-ameno-cyan border border-ameno-safira/30 text-xl font-bold">2</div>
-                        <div class="w-12 h-12 bg-ameno-esmeralda/20 rounded-xl flex items-center justify-center text-ameno-esmeralda border border-ameno-esmeralda/30 text-xl font-bold">3</div>
+                    <div class="flex gap-3 mb-6">
+                        <div class="w-10 h-10 bg-ameno-safira/20 rounded-lg flex items-center justify-center text-ameno-cyan border border-ameno-safira/30 text-lg font-bold">2</div>
+                        <div class="w-10 h-10 bg-ameno-esmeralda/20 rounded-lg flex items-center justify-center text-ameno-esmeralda border border-ameno-esmeralda/30 text-lg font-bold">3</div>
                     </div>
-                    <h3 class="text-3xl font-bold mb-4">Da Espera Inteligente à Petição Pronta.</h3>
-                    <p class="text-ameno-prata text-lg leading-relaxed mb-4">
-                        <strong>JusPrime AI em Espera:</strong> A inteligência recebe a ata automaticamente e aguarda a inserção dos documentos probatórios.
+                    <h3 class="text-2xl font-bold mb-4">Da Espera Inteligente à Petição Pronta.</h3>
+                    <p class="text-ameno-prata text-base leading-relaxed mb-4">
+                        <strong class="text-white font-medium">JusPrime AI em Espera:</strong> A inteligência recebe a ata automaticamente e aguarda a inserção dos documentos probatórios (PDFs).
                     </p>
-                    <p class="text-ameno-prata text-lg leading-relaxed">
-                        <strong>Petição Finalizada:</strong> Com os fatos e documentos cruzados, o JusPrime confecciona a inicial de primeiro grau utilizando o tom de voz do seu escritório e a pesquisa exata.
+                    <p class="text-ameno-prata text-base leading-relaxed">
+                        <strong class="text-white font-medium">Petição Finalizada:</strong> Com os fatos e documentos cruzados, o JusPrime confecciona a inicial de primeiro grau utilizando o tom de voz do seu escritório e a pesquisa exata.
                     </p>
                 </div>
                 <div class="md:w-1/2 w-full">
-                    <!-- AQUI VOCÊ VAI COLAR O LINK DO SEGUNDO MOCKUP (PETIÇÃO) -->
-                    <img src="https://via.placeholder.com/600x400/0F172A/10B981?text=Mockup+JusPrime" alt="Geração de Petição Inicial" class="w-full h-auto rounded-2xl shadow-[0_0_40px_rgba(16,185,129,0.1)] border border-white/10 object-cover">
+                    <!-- AQUI ENTRARÁ SUA IMAGEM DO NANOBANANA/CANVA -->
+                    <img src="https://via.placeholder.com/600x400/0F172A/10B981?text=Mockup+JusPrime" alt="Geração de Petição Inicial" class="w-full h-auto rounded-xl shadow-[0_0_30px_rgba(16,185,129,0.1)] border border-white/10 object-cover">
                 </div>
             </div>
 
         </div>
     </section>
 
-    <!-- O BENTO GRID (Foco nos Aplicativos com sua Copy agressiva) -->
+    <!-- O BENTO GRID -->
     <section id="solucoes" class="py-24 px-6 max-w-7xl mx-auto">
         <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">Módulos de Alta Performance</h2>
-            <p class="text-ameno-prata">Projetados para multiplicar a capacidade analítica da sua equipe jurídica.</p>
+            <h2 class="text-3xl font-bold mb-4">Módulos de Alta Performance</h2>
+            <p class="text-ameno-prata text-base">Projetados para multiplicar a capacidade analítica da sua equipe jurídica.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <!-- Card JusPrime (Sua Copy GGrowth) -->
-            <div class="md:col-span-2 bg-gradient-to-br from-ameno-card to-ameno-fundo p-10 rounded-2xl border border-white/5 hover:border-ameno-cyan/40 transition-all duration-300 group shadow-lg relative overflow-hidden">
-                <div class="w-14 h-14 bg-ameno-safira/20 rounded-xl flex items-center justify-center mb-6 border border-ameno-safira/30">
-                    <svg class="w-7 h-7 text-ameno-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+            <!-- Card JusPrime -->
+            <div class="md:col-span-2 bg-gradient-to-br from-ameno-card to-ameno-fundo p-8 rounded-2xl border border-white/5 hover:border-ameno-cyan/30 transition-all duration-300 shadow-lg">
+                <div class="w-12 h-12 bg-ameno-safira/20 rounded-lg flex items-center justify-center mb-6 border border-ameno-safira/30">
+                    <svg class="w-6 h-6 text-ameno-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-white">JusPrime AI</h3>
-                <div class="space-y-4 text-ameno-prata leading-relaxed max-w-xl">
-                    <p><strong class="text-ameno-cyan">Pesquisa superior ao JusBrasil:</strong> Nosso prompt hiperespecializado ignora entendimentos genéricos e traz apenas a jurisprudência exata para o seu caso.</p>
-                    <p><strong class="text-ameno-cyan">Zero Alucinação:</strong> IA treinada especificamente com os processos, modelos e a forma de escrita exclusiva do seu escritório.</p>
+                <h3 class="text-xl font-bold mb-4 text-white">JusPrime AI</h3>
+                <div class="space-y-3 text-ameno-prata text-sm leading-relaxed max-w-xl">
+                    <p><strong class="text-ameno-cyan font-medium">Pesquisa superior ao JusBrasil:</strong> Nosso prompt hiperespecializado ignora entendimentos genéricos e traz apenas a jurisprudência exata para o seu caso.</p>
+                    <p><strong class="text-ameno-cyan font-medium">Zero Alucinação:</strong> IA treinada especificamente com os processos, modelos e a forma de escrita exclusiva do seu escritório.</p>
                 </div>
             </div>
 
-            <!-- Card AtaPrime (Sua Copy GGrowth) -->
-            <div class="md:col-span-1 bg-gradient-to-br from-ameno-card to-ameno-fundo p-10 rounded-2xl border border-white/5 hover:border-ameno-cyan/40 transition-all duration-300 group shadow-lg">
-                <div class="w-14 h-14 bg-ameno-safira/20 rounded-xl flex items-center justify-center mb-6 border border-ameno-safira/30">
-                    <svg class="w-7 h-7 text-ameno-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+            <!-- Card AtaPrime -->
+            <div class="md:col-span-1 bg-gradient-to-br from-ameno-card to-ameno-fundo p-8 rounded-2xl border border-white/5 hover:border-ameno-cyan/30 transition-all duration-300 shadow-lg">
+                <div class="w-12 h-12 bg-ameno-safira/20 rounded-lg flex items-center justify-center mb-6 border border-ameno-safira/30">
+                    <svg class="w-6 h-6 text-ameno-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-white">AtaPrime AI</h3>
-                <div class="space-y-4 text-ameno-prata leading-relaxed">
-                    <p><strong class="text-ameno-cyan">Foco Corporativo:</strong> Muito além de transcrever áudio. O assistente definitivo para sócios e seniores, blindando o repasse de informações para a equipe.</p>
+                <h3 class="text-xl font-bold mb-4 text-white">AtaPrime AI</h3>
+                <div class="space-y-3 text-ameno-prata text-sm leading-relaxed">
+                    <p><strong class="text-ameno-cyan font-medium">Foco Corporativo:</strong> Muito além de transcrever áudio. O assistente definitivo para sócios, blindando o repasse de informações para a equipe.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ / QUEBRA DE OBJEÇÕES (Com a sua copy de Segurança integrada) -->
-    <section id="faq" class="py-24 px-6 max-w-4xl mx-auto bg-ameno-fundo border-t border-white/5">
+    <!-- FAQ / QUEBRA DE OBJEÇÕES -->
+    <section id="faq" class="py-24 px-6 max-w-3xl mx-auto border-t border-white/5">
         <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">Perguntas Frequentes e Governança</h2>
-            <p class="text-ameno-prata">Respostas diretas sobre a operação e a segurança da Suíte Ameno IA.</p>
+            <h2 class="text-3xl font-bold mb-4">Governança e Segurança</h2>
+            <p class="text-ameno-prata text-base">Respostas diretas sobre a operação e privacidade da Suíte Ameno.</p>
         </div>
         
-        <div class="space-y-4">
-            <!-- Pergunta 1 (Aberta, com a copy de Treinamento Fechado) -->
-            <details class="group bg-ameno-card rounded-xl border border-white/5 [&_summary::-webkit-details-marker]:hidden" open>
-                <summary class="flex items-center justify-between p-6 font-semibold text-lg cursor-pointer hover:text-ameno-cyan transition hover:bg-white/5">
+        <div class="space-y-3">
+            <details class="group bg-ameno-card rounded-lg border border-white/5 [&_summary::-webkit-details-marker]:hidden" open>
+                <summary class="flex items-center justify-between p-5 font-medium text-base cursor-pointer hover:text-ameno-cyan transition hover:bg-white/5">
                     Meus dados serão usados para treinar outras IAs públicas?
-                    <span class="text-2xl text-ameno-prata group-open:rotate-45 transition-transform duration-300">+</span>
+                    <span class="text-xl text-ameno-prata group-open:rotate-45 transition-transform duration-300">+</span>
                 </summary>
-                <div class="px-6 pb-6 text-ameno-prata leading-relaxed bg-ameno-card rounded-b-xl border border-white/5 border-t-0">
-                    Absolutamente não. Seus dados estão seguros. O modelo do JusPrime AI é treinado em silo (ambiente fechado) exclusivamente com a base de dados do seu escritório. Não compartilhamos informações sigilosas dos seus clientes com IAs públicas.
+                <div class="px-5 pb-5 text-sm text-ameno-prata leading-relaxed bg-ameno-card rounded-b-lg border border-white/5 border-t-0">
+                    Absolutamente não. Seus dados estão seguros. O modelo do JusPrime AI é treinado em silo (ambiente fechado) exclusivamente com a base de dados do seu escritório. Não compartilhamos informações sigilosas dos seus clientes.
                 </div>
             </details>
 
-            <!-- Pergunta 2 -->
-            <details class="group bg-ameno-card rounded-xl border border-white/5 [&_summary::-webkit-details-marker]:hidden">
-                <summary class="flex items-center justify-between p-6 font-semibold text-lg cursor-pointer hover:text-ameno-cyan transition hover:bg-white/5">
+            <details class="group bg-ameno-card rounded-lg border border-white/5 [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex items-center justify-between p-5 font-medium text-base cursor-pointer hover:text-ameno-cyan transition hover:bg-white/5">
                     Como a Suíte Ameno evita "alucinações" na petição?
-                    <span class="text-2xl text-ameno-prata group-open:rotate-45 transition-transform duration-300">+</span>
+                    <span class="text-xl text-ameno-prata group-open:rotate-45 transition-transform duration-300">+</span>
                 </summary>
-                <div class="px-6 pb-6 text-ameno-prata leading-relaxed bg-ameno-card rounded-b-xl border border-white/5 border-t-0">
-                    Nossa inteligência utiliza processamento em cascata com travas algorítmicas de rigor jurídico. A ferramenta é programada para cruzar informações <strong>exclusivamente</strong> com o acervo probatório (PDFs) anexado e bases reais, eliminando o risco de invenção de jurisprudência ou fatos inexistentes.
+                <div class="px-5 pb-5 text-sm text-ameno-prata leading-relaxed bg-ameno-card rounded-b-lg border border-white/5 border-t-0">
+                    Nossa inteligência utiliza travas algorítmicas de rigor jurídico. A ferramenta é programada para cruzar informações <strong>exclusivamente</strong> com o acervo probatório (PDFs) anexado, eliminando o risco de invenção de fatos.
                 </div>
             </details>
 
-            <!-- Pergunta 3 -->
-            <details class="group bg-ameno-card rounded-xl border border-white/5 [&_summary::-webkit-details-marker]:hidden">
-                <summary class="flex items-center justify-between p-6 font-semibold text-lg cursor-pointer hover:text-ameno-cyan transition hover:bg-white/5">
+            <details class="group bg-ameno-card rounded-lg border border-white/5 [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex items-center justify-between p-5 font-medium text-base cursor-pointer hover:text-ameno-cyan transition hover:bg-white/5">
                     A plataforma garante o sigilo exigido pela OAB?
-                    <span class="text-2xl text-ameno-prata group-open:rotate-45 transition-transform duration-300">+</span>
+                    <span class="text-xl text-ameno-prata group-open:rotate-45 transition-transform duration-300">+</span>
                 </summary>
-                <div class="px-6 pb-6 text-ameno-prata leading-relaxed bg-ameno-card rounded-b-xl border border-white/5 border-t-0">
-                    Sim. Toda a nossa comunicação cliente-servidor utiliza protocolos de <strong>criptografia de ponta a ponta (AES-256)</strong> e trânsito via TLS 1.3, o mesmo padrão adotado pelas principais instituições financeiras globais. Seus documentos são processados em instâncias efêmeras (<em>Zero-Data Retention</em>).
+                <div class="px-5 pb-5 text-sm text-ameno-prata leading-relaxed bg-ameno-card rounded-b-lg border border-white/5 border-t-0">
+                    Sim. Toda a nossa comunicação utiliza protocolos de <strong>criptografia de ponta a ponta (AES-256)</strong>. Seus documentos são processados em instâncias efêmeras (<em>Zero-Data Retention</em>).
                 </div>
             </details>
-
         </div>
         
         <div class="mt-12 text-center">
-             <a href="#contato" class="bg-ameno-esmeralda hover:bg-ameno-esmeraldaHover text-white px-8 py-4 rounded-xl font-bold text-lg transition inline-block shadow-[0_0_15px_rgba(16,185,129,0.2)] transform hover:-translate-y-1">Agendar Demonstração</a>
+             <a href="#contato" class="bg-ameno-esmeralda hover:bg-ameno-esmeraldaHover text-white px-6 py-3 rounded-lg font-semibold text-sm transition inline-block shadow-[0_0_15px_rgba(16,185,129,0.15)]">Agendar Demonstração</a>
         </div>
     </section>
 
-    <!-- FOOTER CORPORATIVO (Tipo Norton) -->
-    <footer class="bg-[#080d1e] border-t border-white/5 pt-16 pb-8 px-6 text-sm">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+    <!-- FOOTER CORPORATIVO -->
+    <footer class="bg-[#080d1e] border-t border-white/5 pt-12 pb-6 px-6 text-sm">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
             <div class="col-span-1 md:col-span-1">
-                <div class="text-2xl font-extrabold tracking-tight mb-4 text-white">AMENO<span class="text-ameno-esmeralda">.IA</span></div>
-                <p class="text-ameno-prata leading-relaxed">A suíte de inteligência operacional por trás dos escritórios mais eficientes do país.</p>
+                <div class="text-xl font-bold tracking-tight mb-3 text-white">AMENO<span class="text-ameno-esmeralda">.IA</span></div>
+                <p class="text-ameno-prata/80 text-xs leading-relaxed">A suíte de inteligência operacional por trás dos escritórios mais eficientes do país.</p>
             </div>
             <div>
-                <h4 class="font-bold text-white mb-4">Módulos</h4>
-                <ul class="space-y-2 text-ameno-prata">
+                <h4 class="font-semibold text-white mb-3 text-xs uppercase tracking-wider">Módulos</h4>
+                <ul class="space-y-2 text-ameno-prata/80 text-xs">
                     <li><span class="hover:text-ameno-cyan transition cursor-pointer">AtaPrime AI Reuniões</span></li>
                     <li><span class="hover:text-ameno-cyan transition cursor-pointer">JusPrime AI Petições</span></li>
-                    <li><span class="hover:text-ameno-cyan transition cursor-pointer">Transcrição AssistJud-ATA</span></li>
                 </ul>
             </div>
             <div>
-                <h4 class="font-bold text-white mb-4">Governança Corporativa</h4>
-                <ul class="space-y-2 text-ameno-prata">
+                <h4 class="font-semibold text-white mb-3 text-xs uppercase tracking-wider">Governança</h4>
+                <ul class="space-y-2 text-ameno-prata/80 text-xs">
                     <li><span class="hover:text-ameno-cyan transition cursor-pointer">Compliance LGPD</span></li>
-                    <li><span class="hover:text-ameno-cyan transition cursor-pointer">Política de Retenção de Dados</span></li>
                     <li><span class="hover:text-ameno-cyan transition cursor-pointer">Termos de Serviço</span></li>
                 </ul>
             </div>
             <div>
-                <h4 class="font-bold text-white mb-4">Relacionamento B2B</h4>
-                <ul class="space-y-2 text-ameno-prata">
-                    <li><a href="#contato" class="text-ameno-esmeralda hover:text-white transition font-semibold">Agendar Diagnóstico</a></li>
-                    <li><a href="#orcamento" class="hover:text-ameno-cyan transition">Orçamento Especializado</a></li>
+                <h4 class="font-semibold text-white mb-3 text-xs uppercase tracking-wider">Contato</h4>
+                <ul class="space-y-2 text-ameno-prata/80 text-xs">
+                    <li><a href="#contato" class="text-ameno-esmeralda hover:text-white transition">Agendar Diagnóstico</a></li>
                 </ul>
             </div>
         </div>
         
-        <!-- AS LETRAS MIÚDAS (Construção de Autoridade Corporativa) -->
-        <div class="max-w-7xl mx-auto text-left md:text-justify text-ameno-prata/40 border-t border-white/5 pt-8 text-xs space-y-4">
-            <p>* Detalhes de Infraestrutura: A Ameno IA opera sob uma arquitetura de alta disponibilidade (*Edge Computing*) com isolamento lógico de dados (*Single-Tenant*), projetada especificamente para suportar as exigências de sigilo profissional do setor jurídico. Todos os dados transferidos são protegidos por chaves de criptografia assimétrica AES-256 e TLS 1.3.</p>
-            <p>‡ A responsabilidade pela conferência final, aprovação e protocolo das peças jurídicas geradas pelo sistema JusPrime AI permanece sob a governança exclusiva do escritório de advocacia e de seus advogados devidamente inscritos na OAB, operando a plataforma como uma ferramenta multiplicadora de capacidade produtiva, e não como substituta ao juízo de valor profissional.</p>
-            <p class="font-bold">&copy; 2026 Ameno IA Tecnologia. Todos os direitos reservados. CNPJ: XX.XXX.XXX/0001-XX (Projeto Acadêmico MBA IMPACTA)</p>
+        <div class="max-w-7xl mx-auto text-left text-ameno-prata/30 border-t border-white/5 pt-6 text-[10px] space-y-3 leading-relaxed">
+            <p>* Detalhes de Infraestrutura: A Ameno IA opera sob uma arquitetura de alta disponibilidade (Edge Computing) com isolamento lógico de dados, protegida por criptografia assimétrica AES-256 e TLS 1.3.</p>
+            <p>‡ A responsabilidade pela conferência e protocolo das peças geradas pelo sistema JusPrime AI permanece sob a governança exclusiva do escritório e de advogados inscritos na OAB.</p>
+            <p>&copy; 2026 Ameno IA Tecnologia. Todos os direitos reservados. (Projeto Acadêmico MBA IMPACTA)</p>
         </div>
     </footer>
 
