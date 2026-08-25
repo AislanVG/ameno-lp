@@ -77,7 +77,7 @@
         </div>
         <div class="lg:w-1/2 w-full relative">
             <div class="absolute inset-0 bg-ameno-cyan/20 blur-[100px] rounded-full"></div>
-            <!-- Mockup do App (Substitua pela sua imagem real do app) -->
+            <!-- Mockup do App -->
             <img src="https://via.placeholder.com/800x500/0F172A/38BDF8?text=Mockup+Ameno+Workspace" alt="Interface Ameno IA" class="relative z-10 w-full rounded-xl border border-white/10 glow-effect">
         </div>
     </section>
@@ -336,23 +336,18 @@
         </div>
     </footer>
 
-    <!-- SCRIPT DE AUTENTICAÇÃO SUPABASE V2 -->
+    <!-- SCRIPT DE AUTENTICAÇÃO SUPABASE V2 CORRIGIDO -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script>
-        // -------------------------------------------------------------------
-        // ATENÇÃO: SUBSTITUA AS 3 VARIÁVEIS ABAIXO PELOS SEUS DADOS REAIS!
-        // -------------------------------------------------------------------
-        
-        const supabaseUrl = 'https://imgnwxzhiocajqlcqqec.supabase.co'; // Ex: 'https://xyz.supabase.co'
-        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImltZ253eHpoaW9jYWpxbGNxcWVjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODcyNTk0NDUsImV4cCI6MjEwMjgzNTQ0NX0.2_16wQaCCsxBkSTJdcwCCeaOtPM0zLqfa2T7iNa_9uE'; // A chave 'anon' pública do Supabase
-        const urlDeDestino = 'https://jurisprimeai.streamlit.app/'; // Ex: 'https://seu-app-streamlit.com/'
+        const supabaseUrl = 'https://imgnwxzhiocajqlcqqec.supabase.co'; 
+        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImltZ253eHpoaW9jYWpxbGNxcWVjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODcyNTk0NDUsImV4cCI6MjEwMjgzNTQ0NX0.2_16wQaCCsxBkSTJdcwCCeaOtPM0zLqfa2T7iNa_9uE'; 
+        const urlDeDestino = 'https://jurisprimeai.streamlit.app/'; 
 
-        // Inicializa a conexão com o Supabase
-        const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+        // NOME DA VARIÁVEL CORRIGIDO AQUI PARA NÃO CONFLITAR
+        const clienteSupabase = window.supabase.createClient(supabaseUrl, supabaseKey);
 
-        // Função que é ativada quando qualquer botão "Testar" ou "Login" é clicado
         async function loginComGoogle() {
-            const { data, error } = await supabase.auth.signInWithOAuth({
+            const { data, error } = await clienteSupabase.auth.signInWithOAuth({
                 provider: 'google',
                 options: {
                     redirectTo: urlDeDestino
