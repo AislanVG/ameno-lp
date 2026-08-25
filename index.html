@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ameno IA | Automação Jurídica Enterprise</title>
+    <title>Ameno IA | Um dia de trabalho em 1 minuto</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -16,7 +16,6 @@
                             cyan: '#38BDF8',        
                             safira: '#2563EB',      
                             esmeralda: '#10B981',   
-                            esmeraldaHover: '#059669',
                             gelo: '#F8FAFC',        
                             prata: '#94A3B8'        
                         }
@@ -28,271 +27,285 @@
             }
         }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         details > summary { list-style: none; }
         details > summary::-webkit-details-marker { display: none; }
+        .glow-effect {
+            box-shadow: 0 0 40px rgba(56, 189, 248, 0.15);
+        }
     </style>
 </head>
 <body class="bg-ameno-fundo text-ameno-gelo font-sans antialiased selection:bg-ameno-cyan selection:text-ameno-fundo">
 
-    <!-- CABEÇALHO -->
-    <header class="fixed w-full top-0 z-50 bg-ameno-fundo/90 backdrop-blur-lg border-b border-white/5">
+    <!-- CABEÇALHO (Minimalista, estilo a referência) -->
+    <header class="fixed w-full top-0 z-50 bg-ameno-fundo/95 backdrop-blur border-b border-white/5">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-xl font-bold tracking-tight">
-                AMENO<span class="text-ameno-esmeralda">.IA</span>
+            <div class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
+                <svg class="w-6 h-6 text-ameno-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                AMENO<span class="text-ameno-cyan">.IA</span>
             </div>
-            <nav class="hidden md:flex space-x-8 text-ameno-prata text-sm font-medium">
-                <a href="#solucoes" class="hover:text-white transition">Ecossistema</a>
-                <a href="#fluxo" class="hover:text-white transition">Como Funciona</a>
-                <a href="#seguranca" class="hover:text-white transition">Governança</a>
+            <nav class="hidden md:flex space-x-6 text-ameno-prata text-sm font-medium">
+                <a href="#produtos" class="hover:text-white transition">Produtos</a>
+                <a href="#pecas" class="hover:text-white transition">Peças</a>
+                <a href="#quem-somos" class="hover:text-white transition">Quem Somos</a>
                 <a href="#faq" class="hover:text-white transition">FAQ</a>
             </nav>
-            <div class="hidden md:flex items-center space-x-4">
-                <a href="#orcamento" class="text-sm font-medium text-ameno-prata hover:text-white transition border border-white/10 px-4 py-2 rounded-lg">Orçamento Especializado</a>
-                <a href="#contato" class="bg-ameno-esmeralda hover:bg-ameno-esmeraldaHover text-white px-5 py-2 rounded-lg text-sm font-semibold shadow-[0_0_15px_rgba(16,185,129,0.2)] transition">
-                    Agendar Demonstração
+            <div class="flex items-center space-x-4">
+                <a href="#" class="text-sm font-medium text-white hover:text-ameno-cyan transition border border-white/20 px-6 py-2 rounded-lg">Login</a>
+                <a href="#" class="bg-ameno-safira hover:bg-blue-600 text-white px-6 py-2 rounded-lg text-sm font-bold transition shadow-lg">
+                    Testar Grátis
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- HERO SECTION (Modelo Captura de Lead Lado a Lado - Texto Centralizado) -->
-    <section class="relative pt-32 pb-24 px-6 max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 min-h-[90vh]">
-        <!-- Fundo Decorativo Sutil -->
-        <div class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-ameno-safira/10 blur-[120px] rounded-full pointer-events-none z-0"></div>
-
-        <!-- COLUNA DA ESQUERDA: Copy e Autoridade (Totalmente Centralizada) -->
-        <div class="lg:w-1/2 flex flex-col items-center text-center z-10 pt-10 lg:pt-0">
-            
-            <!-- Logo Grande -->
-            <div class="text-4xl md:text-5xl font-black tracking-tighter mb-6 text-white hidden lg:block">
-                AMENO<span class="text-ameno-esmeralda">.IA</span>
-            </div>
-
-            <h1 class="text-4xl md:text-5xl lg:text-[52px] font-bold tracking-tight mb-6 leading-[1.1] text-ameno-gelo">
-                Da reunião com o <br />
-                cliente à <span class="text-ameno-cyan">petição inicial</span><br />
-                em tempo recorde.
+    <!-- HERO SECTION (Promessa Forte + Mockup com Glow) -->
+    <section class="pt-40 pb-20 px-6 max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
+        <div class="lg:w-1/2 z-10">
+            <p class="text-ameno-prata font-medium mb-4 text-sm tracking-wide uppercase">A infraestrutura preferida por escritórios inovadores</p>
+            <h1 class="text-5xl lg:text-[64px] font-extrabold tracking-tight mb-6 leading-[1.1] text-white">
+                Um dia inteiro de <br>trabalho <span class="text-ameno-cyan">em menos <br>de 1 minuto!</span>
             </h1>
-            
-            <p class="text-base md:text-lg text-ameno-prata mb-10 leading-relaxed max-w-lg">
-                A Suíte Ameno integra a captura de atas de reuniões com a redação jurídica avançada. Elimine alucinações da IA e use a jurisprudência exata que seu escritório precisa.
+            <p class="text-lg text-ameno-prata mb-10 leading-relaxed max-w-md">
+                Otimize sua escrita de peças processuais com Inteligência Artificial e Jurisprudências reais para Advogados.
             </p>
-
-            <!-- Prova Social Empilhada -->
-            <div class="space-y-2 mb-10 text-sm text-ameno-prata/80 font-medium">
-                <p>+ de 10.000 horas operacionais salvas</p>
-                <p>Ambiente Single-Tenant com Isolamento de Dados</p>
-                <p class="text-[10px] uppercase tracking-widest text-ameno-prata/50 mt-4 block">A infraestrutura Enterprise do setor jurídico</p>
-            </div>
-            
-            <!-- Botão de "Conhecer" -->
-            <a href="#fluxo" class="bg-ameno-safira hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold text-sm transition flex items-center justify-center gap-2">
-                Conhecer a Arquitetura
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+            <a href="#" class="bg-ameno-safira hover:bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-sm uppercase tracking-wider transition shadow-[0_0_20px_rgba(37,99,235,0.4)] inline-block">
+                Teste Grátis e Sinta o Impacto
             </a>
         </div>
+        <div class="lg:w-1/2 w-full relative">
+            <div class="absolute inset-0 bg-ameno-cyan/20 blur-[100px] rounded-full"></div>
+            <!-- Mockup do App (Substitua pela sua imagem real do app) -->
+            <img src="https://via.placeholder.com/800x500/0F172A/38BDF8?text=Mockup+Ameno+Workspace" alt="Interface Ameno IA" class="relative z-10 w-full rounded-xl border border-white/10 glow-effect">
+        </div>
+    </section>
 
-        <!-- COLUNA DA DIREITA: Card de Captura -->
-        <div class="lg:w-[450px] w-full z-10">
-            <div class="bg-white rounded-2xl p-8 shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-gray-100">
-                <div class="text-center mb-6">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Acesso Antecipado</h3>
-                    <p class="text-gray-500 text-sm">Cadastre-se para o diagnóstico da Suíte Ameno.</p>
-                </div>
-
-                <form class="space-y-4">
-                    <!-- Botão Falso Google -->
-                    <button type="button" class="w-full flex items-center justify-center gap-3 bg-white border border-gray-300 text-gray-700 px-4 py-3 rounded-lg font-medium hover:bg-gray-50 transition text-sm">
-                        <svg class="w-5 h-5" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-                        Continuar com Google
-                    </button>
-
-                    <div class="relative flex items-center py-2">
-                        <div class="flex-grow border-t border-gray-200"></div>
-                        <span class="flex-shrink-0 mx-4 text-gray-400 text-xs">ou</span>
-                        <div class="flex-grow border-t border-gray-200"></div>
-                    </div>
-
-                    <div>
-                        <input type="email" placeholder="Digite seu e-mail corporativo..." class="w-full bg-white border border-gray-300 text-gray-900 px-4 py-3 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-ameno-cyan focus:border-transparent placeholder-gray-400" required>
-                    </div>
-
-                    <button type="submit" class="w-full bg-gray-100 text-gray-400 cursor-not-allowed px-4 py-3 rounded-lg font-bold text-sm transition hover:bg-ameno-esmeralda hover:text-white" onmouseover="this.classList.remove('bg-gray-100', 'text-gray-400', 'cursor-not-allowed')">
-                        Continuar com e-mail
-                    </button>
-                </form>
-
-                <p class="text-[10px] text-gray-400 text-center mt-6 leading-tight">
-                    Ao continuar, você concorda com nossos <a href="#" class="underline hover:text-gray-600">Termos de Uso</a> e <a href="#" class="underline hover:text-gray-600">Política de Privacidade</a>, garantindo o sigilo dos seus dados.
-                </p>
+    <!-- FEATURES (3 Colunas, Foco na Rotina) -->
+    <section class="py-24 px-6 max-w-6xl mx-auto text-center border-t border-white/5">
+        <p class="text-ameno-cyan font-medium text-sm mb-4">Veja como a Inteligência Artificial da Ameno IA pode facilitar sua advocacia</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-16 text-white max-w-3xl mx-auto">
+            Otimize suas tarefas de rotina para focar no que realmente importa na sua advocacia
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
+            <div>
+                <svg class="w-10 h-10 text-ameno-cyan mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                <h3 class="text-xl font-bold text-white mb-4">Crie peças processuais de alta qualidade em segundos</h3>
+                <p class="text-ameno-prata text-sm leading-relaxed">Você poderá criar peças processuais de alta qualidade em menos de 1 minuto, informando apenas os dados básicos da peça que precisa.</p>
+            </div>
+            <div>
+                <svg class="w-10 h-10 text-ameno-cyan mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                <h3 class="text-xl font-bold text-white mb-4">Gere peças específicas para os seus casos jurídicos</h3>
+                <p class="text-ameno-prata text-sm leading-relaxed">Nada de modelo pronto. Com a Ameno IA, você cria peças específicas e exclusivas para os casos dos seus clientes. Isso tudo em poucos minutos.</p>
+            </div>
+            <div>
+                <svg class="w-10 h-10 text-ameno-cyan mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                <h3 class="text-xl font-bold text-white mb-4">Peças geradas por uma IA 100% treinada em direito</h3>
+                <p class="text-ameno-prata text-sm leading-relaxed">Suas peças serão criadas por uma IA treinada com a lei e a jurisprudência do país. Mais assertividade, mais tranquilidade e arquitetura segura.</p>
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO ZIGUE-ZAGUE (Tangibilização do Fluxo com Mockups Reais) -->
-    <section id="fluxo" class="py-24 px-6 bg-ameno-card/30 border-y border-white/5">
-        <div class="max-w-7xl mx-auto space-y-24">
-            
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <h2 class="text-3xl font-bold mb-4 text-ameno-gelo">Hiperautomação do Contencioso</h2>
-                <p class="text-ameno-prata text-base">O fluxo contínuo e sem fricção projetado para escritórios de alta performance.</p>
-            </div>
+    <!-- SHOWCASE 1 (Card Escuro com Mockup) -->
+    <section class="py-12 px-6 max-w-7xl mx-auto text-center">
+        <a href="#" class="bg-ameno-safira hover:bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-sm uppercase tracking-wider transition inline-block mb-16">
+            Teste Grátis e Sinta o Impacto
+        </a>
 
-            <!-- Passo 1 (Transcrição) -->
-            <div class="flex flex-col md:flex-row items-center gap-16">
-                <div class="md:w-1/2">
-                    <div class="w-10 h-10 bg-ameno-safira/20 rounded-lg flex items-center justify-center mb-6 text-ameno-cyan border border-ameno-safira/30 text-lg font-bold">1</div>
-                    <h3 class="text-2xl font-bold mb-4 text-ameno-gelo">AtaPrime AI captura a reunião.</h3>
-                    <p class="text-ameno-prata text-base leading-relaxed">
-                        Muito além de transcrever áudio. O aplicativo documenta toda a conversa com o cliente, entende o contexto jurídico e extrai os principais pontos de ação e fatos relevantes para alimentar a petição seguinte.
-                    </p>
-                </div>
-                <div class="md:w-1/2 w-full">
-                     <!-- AQUI ENTRARÁ SUA IMAGEM DO NANOBANANA/CANVA -->
-                     <img src="https://via.placeholder.com/600x400/0F172A/38BDF8?text=Mockup+AtaPrime" alt="Transcrição de Reunião" class="w-full h-auto rounded-xl shadow-[0_0_30px_rgba(37,99,235,0.1)] border border-white/10 object-cover">
-                </div>
+        <div class="bg-gradient-to-br from-ameno-card to-ameno-fundo border border-white/5 rounded-3xl p-12 flex flex-col md:flex-row items-center gap-12 text-left relative overflow-hidden">
+            <div class="md:w-1/2 z-10">
+                <svg class="w-12 h-12 text-ameno-cyan mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Tenha peças completas e ricas com informação jurídica consistente</h2>
+                <p class="text-ameno-prata mb-6 text-lg">A IA para advogados Ameno IA gera peças completas e subdivididas em tópicos, com linha argumentativa completa e detalhes do caso do cliente.</p>
+                <p class="text-ameno-cyan font-bold">(Algumas peças geradas têm mais de 10 páginas!)</p>
             </div>
-
-            <!-- Passo 2 & 3 (Geração) -->
-            <div class="flex flex-col md:flex-row-reverse items-center gap-16">
-                <div class="md:w-1/2">
-                    <div class="flex gap-3 mb-6">
-                        <div class="w-10 h-10 bg-ameno-safira/20 rounded-lg flex items-center justify-center text-ameno-cyan border border-ameno-safira/30 text-lg font-bold">2</div>
-                        <div class="w-10 h-10 bg-ameno-esmeralda/20 rounded-lg flex items-center justify-center text-ameno-esmeralda border border-ameno-esmeralda/30 text-lg font-bold">3</div>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-ameno-gelo">Da Espera Inteligente à Petição Pronta.</h3>
-                    <p class="text-ameno-prata text-base leading-relaxed mb-4">
-                        <strong class="text-white font-medium">JusPrime AI em Espera:</strong> A inteligência recebe a ata automaticamente e aguarda a inserção dos documentos probatórios (PDFs).
-                    </p>
-                    <p class="text-ameno-prata text-base leading-relaxed">
-                        <strong class="text-white font-medium">Petição Finalizada:</strong> Com os fatos e documentos cruzados, o JusPrime confecciona a inicial de primeiro grau utilizando o tom de voz do seu escritório e a pesquisa exata.
-                    </p>
-                </div>
-                <div class="md:w-1/2 w-full">
-                    <!-- AQUI ENTRARÁ SUA IMAGEM DO NANOBANANA/CANVA -->
-                    <img src="https://via.placeholder.com/600x400/0F172A/10B981?text=Mockup+JusPrime" alt="Geração de Petição Inicial" class="w-full h-auto rounded-xl shadow-[0_0_30px_rgba(16,185,129,0.1)] border border-white/10 object-cover">
-                </div>
+            <div class="md:w-1/2 relative z-10">
+                <!-- Substitua pelo Mockup do JusPrime gerando texto -->
+                <img src="https://via.placeholder.com/500x600/0F172A/38BDF8?text=Mockup+Peti%C3%A7%C3%A3o+Ameno" alt="Geração de Peça" class="w-full rounded-xl border border-white/10 glow-effect shadow-2xl">
             </div>
-
         </div>
     </section>
 
-    <!-- O BENTO GRID (Módulos) -->
-    <section id="solucoes" class="py-24 px-6 max-w-7xl mx-auto">
+    <!-- DEPOIMENTOS (Quem usa recomenda) -->
+    <section class="py-24 px-6 max-w-7xl mx-auto border-t border-white/5">
         <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold mb-4 text-ameno-gelo">Módulos de Alta Performance</h2>
-            <p class="text-ameno-prata text-base">Projetados para multiplicar a capacidade analítica da sua equipe jurídica.</p>
+            <h2 class="text-3xl md:text-4xl font-bold text-white">Quem usa <span class="text-ameno-cyan">recomenda</span></h2>
+            <p class="text-ameno-prata mt-4">Veja a experiência de escritórios de alta performance</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <!-- Card JusPrime (Geração) -->
-            <div class="md:col-span-2 bg-gradient-to-br from-ameno-card to-ameno-fundo p-8 rounded-2xl border border-white/5 hover:border-ameno-cyan/30 transition-all duration-300 shadow-lg group">
-                <div class="w-12 h-12 bg-ameno-safira/20 rounded-lg flex items-center justify-center mb-6 border border-ameno-safira/30 group-hover:bg-ameno-safira/40">
-                    <svg class="w-6 h-6 text-ameno-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-ameno-card border border-white/5 p-8 rounded-2xl">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-ameno-cyan font-bold">AJ</div>
+                    <div>
+                        <h4 class="text-white font-bold">Advocacia Integrada</h4>
+                        <p class="text-ameno-prata text-xs">Escritório Boutique</p>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-white">JusPrime AI: Redação Jurídica</h3>
-                <div class="space-y-3 text-ameno-prata text-sm leading-relaxed max-w-xl">
-                    <p><strong class="text-ameno-cyan font-medium">Pesquisa superior ao JusBrasil:</strong> Nosso prompt hiperespecializado ignora entendimentos genéricos e traz apenas a jurisprudência exata para o seu caso.</p>
-                    <p><strong class="text-ameno-cyan font-medium">Zero Alucinação:</strong> IA treinada especificamente com os processos, modelos e a forma de escrita exclusiva do seu escritório.</p>
+                <p class="text-ameno-prata text-sm leading-relaxed italic">"Essa ferramenta revolucionou a forma como conduzimos nosso trabalho. Com a capacidade de extrair fatos com o AtaPrime e gerar a peça no JusPrime, conseguimos otimizar significativamente nosso tempo. O suporte da Ameno IA é excepcional."</p>
+            </div>
+            <div class="space-y-8">
+                <div class="bg-ameno-card border border-white/5 p-8 rounded-2xl">
+                    <p class="text-ameno-prata text-sm leading-relaxed italic mb-4">"Me ajuda muito. Agora não tenho mais acúmulo de serviço para elaborar peças. Meu faturamento aumentou expressivamente."</p>
+                    <h4 class="text-white font-bold text-sm">Mariana Costa</h4>
+                    <p class="text-ameno-prata text-xs">Advogada Sênior</p>
+                </div>
+                <div class="bg-ameno-card border border-white/5 p-8 rounded-2xl">
+                    <p class="text-ameno-prata text-sm leading-relaxed italic mb-4">"O que antes eu gastava dias para produzir, agora levo apenas horas para concluir a revisão. É o meu assistente definitivo."</p>
+                    <h4 class="text-white font-bold text-sm">Carlos Eduardo Silva</h4>
+                    <p class="text-ameno-prata text-xs">Sócio Majoritário</p>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Card AtaPrime (Captação) -->
-            <div class="md:col-span-1 bg-gradient-to-br from-ameno-card to-ameno-fundo p-8 rounded-2xl border border-white/5 hover:border-ameno-cyan/30 transition-all duration-300 shadow-lg group">
-                <div class="w-12 h-12 bg-ameno-safira/20 rounded-lg flex items-center justify-center mb-6 border border-ameno-safira/30 group-hover:bg-ameno-safira/40">
+    <!-- FAQ (O Texto Exato Injetado na Arquitetura) -->
+    <section id="faq" class="py-24 px-6 max-w-4xl mx-auto border-t border-white/5">
+        <h2 class="text-3xl font-bold text-center text-white mb-12">Perguntas e Respostas</h2>
+        
+        <div class="space-y-4">
+            <details class="group border-b border-white/10 [&_summary::-webkit-details-marker]:hidden" open>
+                <summary class="flex items-center justify-between py-6 font-semibold text-lg cursor-pointer text-white hover:text-ameno-cyan transition">
+                    O que é a Ameno IA?
+                    <span class="text-2xl text-ameno-cyan group-open:rotate-180 transition-transform duration-300">↓</span>
+                </summary>
+                <div class="pb-6 text-ameno-prata text-sm leading-relaxed">
+                    A Ameno IA é uma plataforma de inteligência artificial desenvolvida especialmente para advogados, escritórios de advocacia e departamentos jurídicos. Ela funciona como uma assistente jurídica virtual capaz de auxiliar na elaboração de documentos legais (como petições, contratos e recursos) e na pesquisa de informações jurídicas. Com a Ameno IA, profissionais do Direito podem automatizar tarefas repetitivas e consumir menos tempo na redação de peças processuais, focando mais na estratégia dos casos e no atendimento aos clientes. Em resumo, trata-se de uma ferramenta inovadora que integra tecnologia de IA ao dia a dia jurídico de forma fácil e eficiente, sempre alinhada às normas do Direito brasileiro.
+                </div>
+            </details>
+
+            <details class="group border-b border-white/10 [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex items-center justify-between py-6 font-semibold text-lg cursor-pointer text-white hover:text-ameno-cyan transition">
+                    Como funciona a inteligência artificial da Ameno IA?
+                    <span class="text-2xl text-ameno-cyan group-open:rotate-180 transition-transform duration-300">↓</span>
+                </summary>
+                <div class="pb-6 text-ameno-prata text-sm leading-relaxed">
+                    A IA da Ameno IA utiliza algoritmos avançados e processamento de linguagem natural treinados especificamente em dados jurídicos brasileiros (legislação, jurisprudência e doutrina). Na prática, o advogado fornece à plataforma as informações básicas do caso ou indica o tipo de documento que precisa, e a IA analisa um vasto conjunto de leis e precedentes para gerar um texto jurídico coerente e personalizado. Diferentemente de plataformas genéricas e concorrentes, a IA da Ameno IA foi treinada diariamente com conteúdo do ordenamento jurídico nacional, o que lhe permite compreender termos técnicos do Direito e estar atualizada com as mudanças na lei e decisões dos tribunais. Assim sendo, produz peças de alta qualidade em minutos.
+                </div>
+            </details>
+
+            <details class="group border-b border-white/10 [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex items-center justify-between py-6 font-semibold text-lg cursor-pointer text-white hover:text-ameno-cyan transition">
+                    Qual é a melhor IA para advogados?
+                    <span class="text-2xl text-ameno-cyan group-open:rotate-180 transition-transform duration-300">↓</span>
+                </summary>
+                <div class="pb-6 text-ameno-prata text-sm leading-relaxed">
+                    A Ameno IA é a solução ideal para advogados que buscam uma ferramenta especializada em Direito. Essa IA foi desenvolvida com foco exclusivo no contexto jurídico brasileiro, treinada em legislação e jurisprudência do país, o que a torna muito mais eficaz do que ferramentas genéricas de IA para redação de peças processuais. O diferencial da Ameno IA está na sua capacidade de interpretar termos técnicos, entender estruturas processuais e oferecer funcionalidades essenciais para a prática jurídica.
+                </div>
+            </details>
+
+            <details class="group border-b border-white/10 [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex items-center justify-between py-6 font-semibold text-lg cursor-pointer text-white hover:text-ameno-cyan transition">
+                    Qual a diferença da inteligência artificial da Ameno IA e ChatGPT?
+                    <span class="text-2xl text-ameno-cyan group-open:rotate-180 transition-transform duration-300">↓</span>
+                </summary>
+                <div class="pb-6 text-ameno-prata text-sm leading-relaxed">
+                    As diferenças são:<br>
+                    - Atualização e processo de melhoria constante sempre com base na legislação em vigor.<br>
+                    - Treinamento e especialização (foco no Direito vs. modelo genérico).<br>
+                    - Precisão jurídica (atualização com jurisprudência e legislação brasileira) reduzindo alucinações.<br>
+                    - Casos de uso e funcionalidades (criação de peças processuais vs. respostas gerais).<br>
+                    - Segurança e conformidade com LGPD.
+                </div>
+            </details>
+
+            <details class="group border-b border-white/10 [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex items-center justify-between py-6 font-semibold text-lg cursor-pointer text-white hover:text-ameno-cyan transition">
+                    Quais são as vantagens de usar a Ameno IA?
+                    <span class="text-2xl text-ameno-cyan group-open:rotate-180 transition-transform duration-300">↓</span>
+                </summary>
+                <div class="pb-6 text-ameno-prata text-sm leading-relaxed space-y-2">
+                    A Ameno IA otimiza a produção de documentos jurídicos, trazendo mais agilidade, precisão e eficiência. Entre os principais benefícios:<br>
+                    • <strong>Rapidez e produtividade:</strong> Redação de peças em minutos.<br>
+                    • <strong>Precisão jurídica:</strong> IA treinada no Direito brasileiro.<br>
+                    • <strong>Personalização inteligente:</strong> Peças adaptadas a cada caso, sem modelos engessados.<br>
+                    • <strong>Edição com IA:</strong> Upload de documentos para revisão e aprimoramento.<br>
+                    • <strong>Foco estratégico:</strong> Automação libera tempo para análise e atendimento a clientes.
+                </div>
+            </details>
+
+            <details class="group border-b border-white/10 [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex items-center justify-between py-6 font-semibold text-lg cursor-pointer text-white hover:text-ameno-cyan transition">
+                    A IA da Ameno IA substitui o trabalho do advogado?
+                    <span class="text-2xl text-ameno-cyan group-open:rotate-180 transition-transform duration-300">↓</span>
+                </summary>
+                <div class="pb-6 text-ameno-prata text-sm leading-relaxed">
+                    Não. A inteligência artificial da Ameno IA não substitui o advogado, e sim potencializa o trabalho dele. Embora a plataforma automatize a redação de documentos e apresente análises rápidas, a condução estratégica, o julgamento crítico e a tomada de decisões jurídicas continuam sendo responsabilidades exclusivas do profissional humano. Portanto, o papel do advogado permanece indispensável.
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- BOTTOM CTA (Card Escuro Final) -->
+    <section class="py-12 px-6 max-w-5xl mx-auto mb-12">
+        <div class="bg-gradient-to-r from-[#0B0F19] to-ameno-card border border-white/10 rounded-3xl p-12 flex flex-col md:flex-row items-center justify-between gap-12">
+            <div class="md:w-1/2">
+                <div class="flex items-center gap-2 mb-4">
                     <svg class="w-6 h-6 text-ameno-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-white">AtaPrime AI: Transcrição Jurídica</h3>
-                <div class="space-y-3 text-ameno-prata text-sm leading-relaxed">
-                    <p><strong class="text-ameno-cyan font-medium">Foco Corporativo:</strong> Muito além de transcrever áudio. O assistente definitivo para sócios, blindando o repasse de informações para a equipe.</p>
+                <h3 class="text-3xl font-bold text-white mb-4">Como funciona a Ameno IA?</h3>
+                <p class="text-ameno-prata mb-8 text-sm leading-relaxed">Alcance resultados excepcionais: produza as melhores peças jurídicas, com uma IA treinada em direito brasileiro, e potencialize seu trabalho.</p>
+                <a href="#" class="bg-ameno-safira hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-bold text-sm uppercase tracking-wider transition inline-block">
+                    Teste Grátis e Sinta o Impacto
+                </a>
+            </div>
+            <div class="md:w-1/2 space-y-6">
+                <div class="flex gap-4 items-start">
+                    <svg class="w-6 h-6 text-ameno-cyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    <p class="text-white text-sm font-medium">Economize tempo com a plataforma de Inteligência Artificial corporativa</p>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <svg class="w-6 h-6 text-ameno-cyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    <p class="text-white text-sm font-medium">Redação de peças processuais de alta qualidade</p>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <svg class="w-6 h-6 text-ameno-cyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    <p class="text-white text-sm font-medium">Peças produzidas com IA 100% treinada com a legislação nacional</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ / QUEBRA DE OBJEÇÕES -->
-    <section id="faq" class="py-24 px-6 max-w-3xl mx-auto border-t border-white/5 bg-ameno-card/10 rounded-2xl mt-12 shadow-[0_0_50px_rgba(37,99,235,0.05)]">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold mb-4 text-ameno-gelo">Governança Corporativa e Segurança</h2>
-            <p class="text-ameno-prata text-base">Respostas diretas sobre a operação e privacidade da Suíte Ameno IA.</p>
-        </div>
-        
-        <div class="space-y-3">
-            <details class="group bg-ameno-card rounded-lg border border-white/5 [&_summary::-webkit-details-marker]:hidden" open>
-                <summary class="flex items-center justify-between p-5 font-medium text-base cursor-pointer hover:text-ameno-cyan transition hover:bg-white/5 rounded-lg">
-                    Meus dados serão usados para treinar outras IAs públicas?
-                    <span class="text-xl text-ameno-prata group-open:rotate-45 transition-transform duration-300">+</span>
-                </summary>
-                <div class="px-5 pb-5 text-sm text-ameno-prata leading-relaxed bg-ameno-card rounded-b-lg border border-white/5 border-t-0">
-                    Absolutamente não. Seus dados estão seguros. O modelo do JusPrime AI é treinado em silo (ambiente fechado) exclusivamente com a base de dados do seu escritório. Não compartilhamos informações sigilosas dos seus clientes com IA pública.
+    <!-- FOOTER -->
+    <footer class="bg-[#050812] border-t border-white/5 pt-16 pb-8 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-12 border-b border-white/5 pb-12">
+            <div>
+                <div class="text-xl font-bold tracking-tight text-white flex items-center gap-2 mb-4">
+                    <svg class="w-5 h-5 text-ameno-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    AMENO<span class="text-ameno-cyan">.IA</span>
                 </div>
-            </details>
-
-            <details class="group bg-ameno-card rounded-lg border border-white/5 [&_summary::-webkit-details-marker]:hidden">
-                <summary class="flex items-center justify-between p-5 font-medium text-base cursor-pointer hover:text-ameno-cyan transition hover:bg-white/5 rounded-lg">
-                    Como a Suíte Ameno evita "alucinações" na petição?
-                    <span class="text-xl text-ameno-prata group-open:rotate-45 transition-transform duration-300">+</span>
-                </summary>
-                <div class="px-5 pb-5 text-sm text-ameno-prata leading-relaxed bg-ameno-card rounded-b-lg border border-white/5 border-t-0">
-                    Nossa inteligência utiliza processamento com travas algorítmicas de rigor jurídico. A ferramenta é programada para cruzar informações <strong>exclusivamente</strong> com o acervo probatório (documentos) que você anexar, eliminando o risco de invenção de fatos processuais.
-                </div>
-            </details>
-
-            <details class="group bg-ameno-card rounded-lg border border-white/5 [&_summary::-webkit-details-marker]:hidden">
-                <summary class="flex items-center justify-between p-5 font-medium text-base cursor-pointer hover:text-ameno-cyan transition hover:bg-white/5 rounded-lg">
-                    A plataforma garante o sigilo exigido pela OAB?
-                    <span class="text-xl text-ameno-prata group-open:rotate-45 transition-transform duration-300">+</span>
-                </summary>
-                <div class="px-5 pb-5 text-sm text-ameno-prata leading-relaxed bg-ameno-card rounded-b-lg border border-white/5 border-t-0">
-                    Sim. Toda a nossa comunicação cliente-servidor utiliza protocolos de <strong>criptografia de ponta a ponta (AES-256)</strong> e trânsito via TLS 1.3, o mesmo padrão adotado pelas principais instituições financeiras globais. Seus documentos são processados em instâncias efêmeras (<em>Zero-Data Retention</em>).
-                </div>
-            </details>
-        </div>
-        
-        <div class="mt-12 text-center">
-             <a href="#contato" class="bg-ameno-esmeralda hover:bg-ameno-esmeraldaHover text-white px-6 py-3 rounded-lg font-semibold text-sm transition inline-block shadow-[0_0_15px_rgba(16,185,129,0.15)] transform hover:-translate-y-1">Agendar Diagnóstico Estratégico</a>
-        </div>
-    </section>
-
-    <!-- FOOTER CORPORATIVO -->
-    <footer class="bg-[#080d1e] border-t border-white/5 pt-12 pb-6 px-6 text-sm text-ameno-prata/80 mt-12">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-10 text-xs">
-            <div class="col-span-1 md:col-span-1">
-                <div class="text-xl font-bold tracking-tight mb-3 text-white">AMENO<span class="text-ameno-esmeralda">.IA</span></div>
-                <p class="leading-relaxed">A suíte de inteligência operacional por trás dos escritórios mais eficientes do país.</p>
+                <p class="text-ameno-prata text-xs">Inteligência artificial<br>para o direito brasileiro.</p>
             </div>
             <div>
-                <h4 class="font-semibold text-white mb-3 text-xs uppercase tracking-wider">Módulos</h4>
-                <ul class="space-y-2 text-ameno-prata/80 text-xs">
-                    <li><span class="hover:text-ameno-cyan transition cursor-pointer">AtaPrime AI (Reuniões)</span></li>
-                    <li><span class="hover:text-ameno-cyan transition cursor-pointer">JusPrime AI (Petições)</span></li>
-                    <li><span class="hover:text-ameno-cyan transition cursor-pointer">Transcrição Jurídica ATA</span></li>
+                <h4 class="text-white text-xs font-bold uppercase tracking-widest mb-6">Produtos</h4>
+                <ul class="space-y-3 text-ameno-prata text-sm">
+                    <li><a href="#" class="hover:text-white transition">Para advogados</a></li>
+                    <li><a href="#" class="hover:text-white transition">Para departamentos jurídicos</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="font-semibold text-white mb-3 text-xs uppercase tracking-wider">Governança</h4>
-                <ul class="space-y-2 text-ameno-prata/80 text-xs">
-                    <li><span class="hover:text-ameno-cyan transition cursor-pointer">Compliance LGPD Enterprise</span></li>
-                    <li><span class="hover:text-ameno-cyan transition cursor-pointer">Política de Retenção de Dados</span></li>
-                    <li><span class="hover:text-ameno-cyan transition cursor-pointer">Termos de Serviço</span></li>
+                <h4 class="text-white text-xs font-bold uppercase tracking-widest mb-6">Empresa</h4>
+                <ul class="space-y-3 text-ameno-prata text-sm">
+                    <li><a href="#" class="hover:text-white transition">Quem somos</a></li>
+                    <li><a href="#" class="hover:text-white transition">Comercial</a></li>
+                    <li><a href="#" class="hover:text-white transition">Suporte</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="font-semibold text-white mb-3 text-xs uppercase tracking-wider">Relacionamento B2B</h4>
-                <ul class="space-y-2 text-ameno-prata/80 text-xs">
-                    <li><a href="#contato" class="text-ameno-esmeralda hover:text-white transition">Agendar Diagnóstico</a></li>
-                    <li><a href="#orcamento" class="hover:text-ameno-cyan transition">Orçamento Especializado</a></li>
+                <h4 class="text-white text-xs font-bold uppercase tracking-widest mb-6">Recursos</h4>
+                <ul class="space-y-3 text-ameno-prata text-sm">
+                    <li><a href="#" class="hover:text-white transition">Blog</a></li>
+                    <li><a href="#" class="hover:text-white transition">Modelos jurídicos</a></li>
                 </ul>
             </div>
         </div>
-        
-        <!-- AS LETRAS MIÚDAS -->
-        <div class="max-w-7xl mx-auto text-left md:text-justify text-ameno-prata/40 border-t border-white/5 pt-6 text-[10px] space-y-3 leading-relaxed">
-            <p>* Detalhes de Infraestrutura: A Ameno IA opera sob uma arquitetura de alta disponibilidade (*Edge Computing*) com isolamento lógico de dados, projetada especificamente para suportar as exigências de sigilo profissional do setor jurídico. Todos os dados transferidos são protegidos por chaves de criptografia assimétrica AES-256 e TLS 1.3.</p>
-            <p>‡ A responsabilidade pela conferência final, aprovação e protocolo das peças jurídicas geradas pelo sistema JusPrime AI permanece sob a governança exclusiva do escritório de advocacia e de seus advogados devidamente inscritos na OAB, operando a plataforma como uma ferramenta multiplicadora de capacidade produtiva.</p>
-            <p class="font-semibold">&copy; 2026 Ameno IA Tecnologias. Todos os direitos reservados. CNPJ: XX.XXX.XXX/0001-XX (Projeto Acadêmico MBA IMPACTA)</p>
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-xs text-ameno-prata/50">
+            <div class="flex gap-4 mb-4 md:mb-0">
+                <a href="#" class="hover:text-white transition border border-white/10 p-2 rounded-full">IG</a>
+                <a href="#" class="hover:text-white transition border border-white/10 p-2 rounded-full">IN</a>
+            </div>
+            <p>&copy; 2026 Ameno IA Tecnologias. Todos os direitos reservados. CNPJ XX.XXX.XXX/0001-XX</p>
         </div>
     </footer>
 
