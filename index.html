@@ -77,13 +77,12 @@
         </div>
         <div class="lg:w-1/2 w-full relative">
             <div class="absolute inset-0 bg-ameno-cyan/20 blur-[100px] rounded-full"></div>
-            <!-- Mockup do App -->
             <img src="https://via.placeholder.com/800x500/0F172A/38BDF8?text=Mockup+Ameno+Workspace" alt="Interface Ameno IA" class="relative z-10 w-full rounded-xl border border-white/10 glow-effect">
         </div>
     </section>
 
     <!-- FEATURES -->
-    <section class="py-24 px-6 max-w-6xl mx-auto text-center border-t border-white/5">
+    <section id="produtos" class="py-24 px-6 max-w-6xl mx-auto text-center border-t border-white/5">
         <p class="text-ameno-cyan font-medium text-sm mb-4">Veja como a Inteligência Artificial da Ameno IA pode facilitar sua advocacia</p>
         <h2 class="text-3xl md:text-4xl font-bold mb-16 text-white max-w-3xl mx-auto">
             Otimize suas tarefas de rotina para focar no que realmente importa na sua advocacia
@@ -160,90 +159,199 @@
         </div>
     </section>
 
-    <!-- SEÇÃO DE PLANOS (PRICING) -->
+    <!-- SEÇÃO DE PLANOS (PRICING COM TOGGLE DINÂMICO) -->
     <section id="orcamento" class="py-24 px-6 max-w-7xl mx-auto border-t border-white/5">
         <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-ameno-gelo">Escolha o plano ideal para a sua banca</h2>
-            <p class="text-ameno-prata text-base max-w-2xl mx-auto">Um workspace integrado. Atas, documentos e peças jurídicas organizadas por casos. Elimine o tempo perdido pulando entre softwares genéricos.</p>
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-ameno-gelo">Escolha o plano ideal para você</h2>
+            <p class="text-ameno-prata text-base max-w-2xl mx-auto">Um caso, tudo em um só lugar. Atas, documentos e peças organizados para o seu escritório. Chega de perder tempo pulando entre abas.</p>
             
-            <div class="flex items-center justify-center gap-4 mt-8">
-                <span class="text-ameno-prata font-medium">Mensal</span>
-                <div class="w-12 h-6 bg-ameno-cyan/80 rounded-full relative cursor-pointer">
-                    <div class="w-4 h-4 bg-white rounded-full absolute right-1 top-1"></div>
-                </div>
-                <span class="text-ameno-gelo font-bold">Anual <span class="text-ameno-cyan text-xs ml-1">-25% OFF</span></span>
+            <!-- Toggle Mensal / Anual -->
+            <div class="flex items-center justify-center gap-3 mt-8">
+                <span id="label-mensal" class="text-sm font-semibold text-white transition">Mensal</span>
+                <button type="button" id="pricing-toggle" onclick="alternarPlanos()" class="w-14 h-7 bg-white/10 rounded-full p-1 transition-colors duration-300 relative focus:outline-none border border-white/20">
+                    <div id="toggle-circle" class="w-5 h-5 bg-ameno-cyan rounded-full transition-transform duration-300 transform translate-x-0"></div>
+                </button>
+                <span id="label-anual" class="text-sm font-semibold text-ameno-prata transition">Anual</span>
             </div>
+            <p id="economia-anual" class="text-xs text-ameno-cyan mt-2 font-medium opacity-0 transition-opacity duration-300">Economize até R$ 599,76 no plano anual</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <!-- Plano 1 -->
-            <div class="bg-ameno-card border border-white/5 rounded-2xl p-8 hover:border-ameno-cyan/30 transition-all duration-300 flex flex-col">
-                <h3 class="text-2xl font-bold text-white mb-2">Boutique</h3>
-                <p class="text-ameno-cyan text-sm mb-6 flex items-center gap-2">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
-                    Uso Individual
-                </p>
-                <div class="mb-6">
-                    <span class="text-4xl font-bold text-white">R$ 149,90</span><span class="text-ameno-prata">/mês</span>
-                    <p class="text-[11px] text-ameno-prata/60 mt-1">Economize no plano anual</p>
+        <!-- Grid de Cards de Planos -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
+            
+            <!-- 1. Básico -->
+            <div class="bg-ameno-card border border-white/10 rounded-2xl p-8 hover:border-ameno-cyan/40 transition-all duration-300 flex flex-col justify-between">
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-1">Básico</h3>
+                    <p class="text-ameno-cyan text-xs font-semibold mb-6 flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        Uso Individual
+                    </p>
+                    
+                    <div class="mb-6">
+                        <div id="preco-original-1" class="text-xs text-ameno-prata line-through hidden">R$ 59,90/mês</div>
+                        <div class="flex items-baseline">
+                            <span id="preco-valor-1" class="text-4xl font-extrabold text-white">R$ 59,90</span>
+                            <span class="text-ameno-prata text-sm ml-1">/mês</span>
+                        </div>
+                        <p id="preco-sub-1" class="text-[11px] text-ameno-prata/70 mt-1">Economize até R$ 143,76 no anual</p>
+                    </div>
+
+                    <button onclick="loginComGoogle()" class="w-full bg-white/5 border border-white/20 hover:bg-white/10 text-white py-3 rounded-lg font-bold text-sm transition mb-8 cursor-pointer">
+                        Assinar
+                    </button>
+
+                    <ul class="space-y-4 text-xs text-ameno-prata">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-4 h-4 text-ameno-cyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
+                            <span>Crie até <strong class="text-white">30 casos</strong></span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-4 h-4 text-ameno-cyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            <span>Monitore até <strong class="text-white">50 processos</strong> simultâneos</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-4 h-4 text-ameno-cyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                            <span id="doc-qtd-1">Gere até <strong class="text-white">15 documentos</strong> por mês</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-4 h-4 text-ameno-cyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path></svg>
+                            <span>Upload de até <strong class="text-white">500 páginas</strong> ou 150MB por arquivo</span>
+                        </li>
+                    </ul>
                 </div>
-                <button onclick="loginComGoogle()" class="block w-full text-center bg-transparent border border-ameno-prata/30 text-white py-3 rounded-lg font-semibold hover:bg-white/5 transition mb-8 cursor-pointer">Assinar</button>
-                <ul class="space-y-4 text-sm text-ameno-prata flex-grow">
-                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-ameno-cyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg>Até <strong class="text-white">50 casos</strong> ativos</li>
-                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-ameno-cyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg>Módulos <strong class="text-white">AtaPrime e JusPrime</strong></li>
-                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-ameno-cyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg>Upload <strong class="text-white">500 páginas/caso</strong></li>
-                </ul>
             </div>
 
-            <!-- Plano 2 -->
-            <div class="bg-gradient-to-b from-[#1E293B] to-ameno-card border border-ameno-cyan/50 rounded-2xl p-8 transform md:-translate-y-4 shadow-[0_0_30px_rgba(56,189,248,0.15)] relative flex flex-col">
-                <div class="absolute top-0 right-8 -translate-y-1/2 bg-ameno-cyan text-ameno-fundo text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Mais Popular</div>
-                <h3 class="text-2xl font-bold text-white mb-2">Crescimento</h3>
-                <p class="text-ameno-cyan text-sm mb-6 flex items-center gap-2">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
-                    Até 3 Usuários
-                </p>
-                <div class="mb-6">
-                    <span class="text-4xl font-bold text-white">R$ 289,90</span><span class="text-ameno-prata">/mês</span>
-                    <p class="text-[11px] text-ameno-prata/60 mt-1">Economize no plano anual</p>
+            <!-- 2. Crescimento (Mais Popular) -->
+            <div class="bg-gradient-to-b from-[#132247] to-ameno-card border-2 border-ameno-cyan rounded-2xl p-8 relative shadow-[0_0_35px_rgba(56,189,248,0.2)] flex flex-col justify-between transform md:-translate-y-2">
+                <div class="absolute -top-3.5 right-6 bg-ameno-cyan text-ameno-fundo text-[11px] font-black px-3 py-1 rounded-full uppercase tracking-wider">
+                    Mais Popular
                 </div>
-                <button onclick="loginComGoogle()" class="block w-full text-center bg-ameno-safira hover:bg-blue-600 text-white py-3 rounded-lg font-bold shadow-lg transition mb-8 cursor-pointer">Assinar</button>
-                <ul class="space-y-4 text-sm text-ameno-prata flex-grow">
-                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-ameno-cyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg>Até <strong class="text-white">200 casos</strong> ativos</li>
-                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-ameno-cyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg>Módulos <strong class="text-white">AtaPrime e JusPrime</strong></li>
-                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-ameno-cyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg>Upload <strong class="text-white">1.500 páginas/caso</strong></li>
-                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-ameno-cyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg><strong class="text-white">Identidade Visual</strong> (Papel Timbrado)</li>
-                </ul>
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-1">Crescimento</h3>
+                    <p class="text-ameno-cyan text-xs font-semibold mb-6 flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        Uso Individual
+                    </p>
+                    
+                    <div class="mb-6">
+                        <div id="preco-original-2" class="text-xs text-ameno-prata line-through hidden">R$ 119,90/mês</div>
+                        <div class="flex items-baseline">
+                            <span id="preco-valor-2" class="text-4xl font-extrabold text-white">R$ 119,90</span>
+                            <span class="text-ameno-prata text-sm ml-1">/mês</span>
+                        </div>
+                        <p id="preco-sub-2" class="text-[11px] text-ameno-prata/70 mt-1">Economize até R$ 287,76 no anual</p>
+                    </div>
+
+                    <button onclick="loginComGoogle()" class="w-full bg-ameno-safira hover:bg-blue-600 text-white py-3 rounded-lg font-bold text-sm shadow-lg transition mb-8 cursor-pointer">
+                        Assinar
+                    </button>
+
+                    <ul class="space-y-4 text-xs text-ameno-prata">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-4 h-4 text-ameno-cyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
+                            <span>Crie até <strong class="text-white">150 casos</strong></span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-4 h-4 text-ameno-cyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            <span>Monitore até <strong class="text-white">100 processos</strong> simultâneos</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-4 h-4 text-ameno-cyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                            <span id="doc-qtd-2">Gere até <strong class="text-white">40 documentos</strong> por mês</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-4 h-4 text-ameno-cyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path></svg>
+                            <span>Upload de até <strong class="text-white">1.200 páginas</strong> ou 150MB por arquivo</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
-            <!-- Plano 3 -->
-            <div class="bg-ameno-card border border-white/5 rounded-2xl p-8 hover:border-ameno-cyan/30 transition-all duration-300 flex flex-col">
-                <h3 class="text-2xl font-bold text-white mb-2">Escala</h3>
-                <p class="text-ameno-cyan text-sm mb-6 flex items-center gap-2">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                    Até 10 Usuários
-                </p>
-                <div class="mb-6">
-                    <span class="text-4xl font-bold text-white">R$ 549,90</span><span class="text-ameno-prata">/mês</span>
-                    <p class="text-[11px] text-ameno-prata/60 mt-1">Economize no plano anual</p>
+            <!-- 3. Escala -->
+            <div class="bg-ameno-card border border-white/10 rounded-2xl p-8 hover:border-ameno-cyan/40 transition-all duration-300 flex flex-col justify-between relative">
+                <div class="absolute -top-3.5 right-6 bg-ameno-safira text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                    Treinamento Online
                 </div>
-                <button onclick="loginComGoogle()" class="block w-full text-center bg-transparent border border-ameno-prata/30 text-white py-3 rounded-lg font-semibold hover:bg-white/5 transition mb-8 cursor-pointer">Assinar</button>
-                <ul class="space-y-4 text-sm text-ameno-prata flex-grow">
-                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-ameno-cyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg>Até <strong class="text-white">600 casos</strong> ativos</li>
-                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-ameno-cyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg>Módulos <strong class="text-white">AtaPrime e JusPrime</strong></li>
-                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-ameno-cyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg>Upload <strong class="text-white">3.000 páginas/caso</strong></li>
-                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-ameno-cyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg><strong class="text-white">Treinamento Online</strong></li>
-                </ul>
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-1">Escala</h3>
+                    <p class="text-ameno-cyan text-xs font-semibold mb-6 flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        Multiusuários
+                    </p>
+                    
+                    <div class="mb-6">
+                        <div id="preco-original-3" class="text-xs text-ameno-prata line-through hidden">R$ 229,90/mês</div>
+                        <div class="flex items-baseline">
+                            <span id="preco-valor-3" class="text-4xl font-extrabold text-white">R$ 229,90</span>
+                            <span class="text-ameno-prata text-sm ml-1">/mês</span>
+                        </div>
+                        <p id="preco-sub-3" class="text-[11px] text-ameno-prata/70 mt-1">Economize até R$ 551,76 no anual</p>
+                    </div>
+
+                    <button onclick="loginComGoogle()" class="w-full bg-white/5 border border-white/20 hover:bg-white/10 text-white py-3 rounded-lg font-bold text-sm transition mb-8 cursor-pointer">
+                        Assinar
+                    </button>
+
+                    <ul class="space-y-4 text-xs text-ameno-prata">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-4 h-4 text-ameno-cyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
+                            <span>Crie até <strong class="text-white">300 casos</strong></span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-4 h-4 text-ameno-cyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            <span>Monitore até <strong class="text-white">200 processos</strong> simultâneos</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-4 h-4 text-ameno-cyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                            <span id="doc-qtd-3">Gere até <strong class="text-white">150 documentos</strong> por mês</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-4 h-4 text-ameno-cyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path></svg>
+                            <span>Upload de até <strong class="text-white">1.500 páginas</strong> ou 150MB por arquivo</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
+
         </div>
 
-        <div class="max-w-6xl mx-auto mt-8 bg-ameno-card/50 border border-white/5 rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
-            <div>
-                <h4 class="text-xl font-bold text-white mb-2">Plano Corporativo (Enterprise)</h4>
-                <p class="text-ameno-prata text-sm">Soluções 100% customizadas para escritórios com altíssimo volume e infraestrutura dedicada.</p>
+        <p class="text-center text-xs text-ameno-prata/60 mt-10">Precisou de mais casos ou processos? A cota de documentos é renovada mensalmente.</p>
+
+        <!-- Benefícios Inclusos + Corporativo -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto mt-12">
+            <div class="bg-ameno-card/40 border border-white/5 rounded-2xl p-8">
+                <h4 class="text-lg font-bold text-white mb-6">Incluso em todos os planos</h4>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-ameno-prata">
+                    <div class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-ameno-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span>Chat Jurídico ilimitado</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-ameno-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span>Busca de Jurisprudência ilimitada</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-ameno-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span>Papel Timbrado e Logo</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-ameno-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span>Todas as instâncias inclusas</span>
+                    </div>
+                </div>
             </div>
-            <div class="shrink-0">
-                 <button onclick="loginComGoogle()" class="inline-block bg-white text-ameno-fundo px-6 py-3 rounded-lg font-bold text-sm hover:bg-gray-200 transition shadow-lg cursor-pointer">Falar com Consultor</button>
+
+            <div class="bg-ameno-card/40 border border-white/5 rounded-2xl p-8 flex flex-col justify-between">
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-2">Corporativo</h4>
+                    <p class="text-xs text-ameno-prata leading-relaxed mb-6">Soluções personalizadas para escritórios com alto volume de processos e necessidades específicas de infraestrutura isolada.</p>
+                </div>
+                <div>
+                    <button onclick="loginComGoogle()" class="bg-white text-ameno-fundo hover:bg-gray-200 px-6 py-2.5 rounded-lg text-xs font-bold transition shadow cursor-pointer">
+                        Solicitar orçamento
+                    </button>
+                </div>
             </div>
         </div>
     </section>
@@ -336,14 +444,13 @@
         </div>
     </footer>
 
-    <!-- SCRIPT DE AUTENTICAÇÃO SUPABASE V2 CORRIGIDO -->
+    <!-- SCRIPT DE AUTENTICAÇÃO E CONTROLE DOS PLANOS -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script>
         const supabaseUrl = 'https://imgnwxzhiocajqlcqqec.supabase.co'; 
         const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImltZ253eHpoaW9jYWpxbGNxcWVjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODcyNTk0NDUsImV4cCI6MjEwMjgzNTQ0NX0.2_16wQaCCsxBkSTJdcwCCeaOtPM0zLqfa2T7iNa_9uE'; 
         const urlDeDestino = 'https://jurisprimeai.streamlit.app/'; 
 
-        // NOME DA VARIÁVEL CORRIGIDO AQUI PARA NÃO CONFLITAR
         const clienteSupabase = window.supabase.createClient(supabaseUrl, supabaseKey);
 
         async function loginComGoogle() {
@@ -357,6 +464,64 @@
             if (error) {
                 console.error("Erro no login corporativo: ", error.message);
                 alert("Ocorreu um erro ao tentar conectar com o Google. Verifique o console.");
+            }
+        }
+
+        // Lógica do Seletor Mensal / Anual
+        let isAnual = false;
+
+        function alternarPlanos() {
+            isAnual = !isAnual;
+
+            const circle = document.getElementById('toggle-circle');
+            const labelMensal = document.getElementById('label-mensal');
+            const labelAnual = document.getElementById('label-anual');
+            const ecoAnual = document.getElementById('economia-anual');
+
+            if (isAnual) {
+                circle.classList.remove('translate-x-0');
+                circle.classList.add('translate-x-7');
+                labelMensal.classList.replace('text-white', 'text-ameno-prata');
+                labelAnual.classList.replace('text-ameno-prata', 'text-white');
+                ecoAnual.classList.remove('opacity-0');
+
+                // Preços Anuais (com desconto)
+                document.getElementById('preco-original-1').classList.remove('hidden');
+                document.getElementById('preco-valor-1').innerText = 'R$ 47,92';
+                document.getElementById('preco-sub-1').innerText = 'Anual, com parcelas mensais';
+                document.getElementById('doc-qtd-1').innerHTML = 'Gere até <strong class="text-white">180 documentos</strong> no ano';
+
+                document.getElementById('preco-original-2').classList.remove('hidden');
+                document.getElementById('preco-valor-2').innerText = 'R$ 95,92';
+                document.getElementById('preco-sub-2').innerText = 'Anual, com parcelas mensais';
+                document.getElementById('doc-qtd-2').innerHTML = 'Gere até <strong class="text-white">480 documentos</strong> no ano';
+
+                document.getElementById('preco-original-3').classList.remove('hidden');
+                document.getElementById('preco-valor-3').innerText = 'R$ 183,92';
+                document.getElementById('preco-sub-3').innerText = 'Anual, com parcelas mensais';
+                document.getElementById('doc-qtd-3').innerHTML = 'Gere até <strong class="text-white">1.800 documentos</strong> no ano';
+            } else {
+                circle.classList.remove('translate-x-7');
+                circle.classList.add('translate-x-0');
+                labelMensal.classList.replace('text-ameno-prata', 'text-white');
+                labelAnual.classList.replace('text-white', 'text-ameno-prata');
+                ecoAnual.classList.add('opacity-0');
+
+                // Preços Mensais
+                document.getElementById('preco-original-1').classList.add('hidden');
+                document.getElementById('preco-valor-1').innerText = 'R$ 59,90';
+                document.getElementById('preco-sub-1').innerText = 'Economize até R$ 143,76 no anual';
+                document.getElementById('doc-qtd-1').innerHTML = 'Gere até <strong class="text-white">15 documentos</strong> por mês';
+
+                document.getElementById('preco-original-2').classList.add('hidden');
+                document.getElementById('preco-valor-2').innerText = 'R$ 119,90';
+                document.getElementById('preco-sub-2').innerText = 'Economize até R$ 287,76 no anual';
+                document.getElementById('doc-qtd-2').innerHTML = 'Gere até <strong class="text-white">40 documentos</strong> por mês';
+
+                document.getElementById('preco-original-3').classList.add('hidden');
+                document.getElementById('preco-valor-3').innerText = 'R$ 229,90';
+                document.getElementById('preco-sub-3').innerText = 'Economize até R$ 551,76 no anual';
+                document.getElementById('doc-qtd-3').innerHTML = 'Gere até <strong class="text-white">150 documentos</strong> por mês';
             }
         }
     </script>
