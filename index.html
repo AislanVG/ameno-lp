@@ -53,10 +53,10 @@
                 <a href="#faq" class="hover:text-white transition">FAQ</a>
             </nav>
             <div class="flex items-center space-x-4">
-                <button onclick="loginComGoogle()" class="text-sm font-medium text-white hover:text-avjuris-cyan transition border border-white/20 px-6 py-2 rounded-lg cursor-pointer">Login</button>
-                <button onclick="loginComGoogle()" class="bg-avjuris-safira hover:bg-blue-600 text-white px-6 py-2 rounded-lg text-sm font-bold transition shadow-lg cursor-pointer">
+                <a href="https://jurisprimeai.streamlit.app/" class="text-sm font-medium text-white hover:text-avjuris-cyan transition border border-white/20 px-6 py-2 rounded-lg cursor-pointer">Login</a>
+                <a href="https://jurisprimeai.streamlit.app/" class="bg-avjuris-safira hover:bg-blue-600 text-white px-6 py-2 rounded-lg text-sm font-bold transition shadow-lg cursor-pointer">
                     Testar Grátis
-                </button>
+                </a>
             </div>
         </div>
     </header>
@@ -71,13 +71,29 @@
             <p class="text-lg text-avjuris-prata mb-10 leading-relaxed max-w-md">
                 Otimize sua escrita de peças processuais com Inteligência Artificial e Jurisprudências reais para Advogados.
             </p>
-            <button onclick="loginComGoogle()" class="bg-avjuris-safira hover:bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-sm uppercase tracking-wider transition shadow-[0_0_20px_rgba(37,99,235,0.4)] cursor-pointer">
+            <a href="https://jurisprimeai.streamlit.app/" class="inline-block bg-avjuris-safira hover:bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-sm uppercase tracking-wider transition shadow-[0_0_20px_rgba(37,99,235,0.4)] cursor-pointer">
                 Teste Grátis e Sinta o Impacto
-            </button>
+            </a>
         </div>
         <div class="lg:w-1/2 w-full relative">
             <div class="absolute inset-0 bg-avjuris-cyan/20 blur-[100px] rounded-full"></div>
-            <img src="https://via.placeholder.com/800x500/0F172A/38BDF8?text=Mockup+AvJuris+Workspace" alt="Interface AvJuris IA" class="relative z-10 w-full rounded-xl border border-white/10 glow-effect">
+            <!-- Mockup do App -->
+            <div class="relative z-10 w-full rounded-2xl border border-white/10 bg-avjuris-card p-6 glow-effect shadow-2xl">
+                <div class="flex items-center gap-2 mb-4 pb-3 border-b border-white/10">
+                    <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+                    <span class="text-xs text-avjuris-prata ml-2 font-mono">jurisprimeai.streamlit.app</span>
+                </div>
+                <div class="space-y-3">
+                    <div class="h-8 bg-white/5 rounded-lg w-3/4 animate-pulse"></div>
+                    <div class="h-4 bg-white/5 rounded w-full"></div>
+                    <div class="h-4 bg-white/5 rounded w-5/6"></div>
+                    <div class="h-24 bg-avjuris-fundo/80 rounded-lg p-4 border border-white/5 text-xs text-avjuris-prata font-mono">
+                        <span class="text-avjuris-cyan">⚖️ AvJuris AI:</span> Análise de precedentes STJ/STF concluída. Minuta jurídica de alta densidade pronta para exportação.
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -109,9 +125,9 @@
 
     <!-- SHOWCASE -->
     <section class="py-12 px-6 max-w-7xl mx-auto text-center">
-        <button onclick="loginComGoogle()" class="bg-avjuris-safira hover:bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-sm uppercase tracking-wider transition inline-block mb-16 cursor-pointer">
+        <a href="https://jurisprimeai.streamlit.app/" class="inline-block bg-avjuris-safira hover:bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-sm uppercase tracking-wider transition mb-16 cursor-pointer">
             Teste Grátis e Sinta o Impacto
-        </button>
+        </a>
 
         <div class="bg-gradient-to-br from-avjuris-card to-avjuris-fundo border border-white/5 rounded-3xl p-12 flex flex-col md:flex-row items-center gap-12 text-left relative overflow-hidden">
             <div class="md:w-1/2 z-10">
@@ -121,7 +137,17 @@
                 <p class="text-avjuris-cyan font-bold">(Algumas peças geradas têm mais de 10 páginas!)</p>
             </div>
             <div class="md:w-1/2 relative z-10">
-                <img src="https://via.placeholder.com/500x600/0F172A/38BDF8?text=Mockup+Peti%C3%A7%C3%A3o+AvJuris" alt="Geração de Peça" class="w-full rounded-xl border border-white/10 glow-effect shadow-2xl">
+                <div class="w-full rounded-2xl border border-white/10 bg-avjuris-fundo p-6 shadow-2xl">
+                    <div class="text-xs text-avjuris-prata font-mono space-y-2">
+                        <div class="text-avjuris-cyan font-bold uppercase">PARECER CÍVEL / MINUTA FORENSE</div>
+                        <p class="text-white/90">EXCELENTÍSSIMO SENHOR DOUTOR DESEMBARGADOR RELATOR...</p>
+                        <p class="text-white/70 italic text-[11px]">Trata-se de recurso tempestivo com preenchimento dos requisitos objetivos de admissibilidade recursal...</p>
+                        <div class="pt-2 border-t border-white/10 flex justify-between items-center text-[10px] text-avjuris-cyan">
+                            <span>Status: Minuta Integral Aprovada</span>
+                            <span>Densidade: 3.400 palavras</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -197,9 +223,9 @@
                         <p id="preco-sub-1" class="text-[11px] text-avjuris-prata/70 mt-1">Economize até R$ 143,76 no anual</p>
                     </div>
 
-                    <button onclick="loginComGoogle()" class="w-full bg-white/5 border border-white/20 hover:bg-white/10 text-white py-3 rounded-lg font-bold text-sm transition mb-8 cursor-pointer">
+                    <a href="https://jurisprimeai.streamlit.app/" class="block text-center w-full bg-white/5 border border-white/20 hover:bg-white/10 text-white py-3 rounded-lg font-bold text-sm transition mb-8 cursor-pointer">
                         Assinar
-                    </button>
+                    </a>
 
                     <ul class="space-y-4 text-xs text-avjuris-prata">
                         <li class="flex items-start gap-3">
@@ -243,9 +269,9 @@
                         <p id="preco-sub-2" class="text-[11px] text-avjuris-prata/70 mt-1">Economize até R$ 287,76 no anual</p>
                     </div>
 
-                    <button onclick="loginComGoogle()" class="w-full bg-avjuris-safira hover:bg-blue-600 text-white py-3 rounded-lg font-bold text-sm shadow-lg transition mb-8 cursor-pointer">
+                    <a href="https://jurisprimeai.streamlit.app/" class="block text-center w-full bg-avjuris-safira hover:bg-blue-600 text-white py-3 rounded-lg font-bold text-sm shadow-lg transition mb-8 cursor-pointer">
                         Assinar
-                    </button>
+                    </a>
 
                     <ul class="space-y-4 text-xs text-avjuris-prata">
                         <li class="flex items-start gap-3">
@@ -289,9 +315,9 @@
                         <p id="preco-sub-3" class="text-[11px] text-avjuris-prata/70 mt-1">Economize até R$ 551,76 no anual</p>
                     </div>
 
-                    <button onclick="loginComGoogle()" class="w-full bg-white/5 border border-white/20 hover:bg-white/10 text-white py-3 rounded-lg font-bold text-sm transition mb-8 cursor-pointer">
+                    <a href="https://jurisprimeai.streamlit.app/" class="block text-center w-full bg-white/5 border border-white/20 hover:bg-white/10 text-white py-3 rounded-lg font-bold text-sm transition mb-8 cursor-pointer">
                         Assinar
-                    </button>
+                    </a>
 
                     <ul class="space-y-4 text-xs text-avjuris-prata">
                         <li class="flex items-start gap-3">
@@ -348,9 +374,9 @@
                     <p class="text-xs text-avjuris-prata leading-relaxed mb-6">Soluções personalizadas para escritórios com alto volume de processos e necessidades específicas de infraestrutura isolada.</p>
                 </div>
                 <div>
-                    <button onclick="loginComGoogle()" class="bg-white text-avjuris-fundo hover:bg-gray-200 px-6 py-2.5 rounded-lg text-xs font-bold transition shadow cursor-pointer">
+                    <a href="https://jurisprimeai.streamlit.app/" class="inline-block bg-white text-avjuris-fundo hover:bg-gray-200 px-6 py-2.5 rounded-lg text-xs font-bold transition shadow cursor-pointer">
                         Solicitar orçamento
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -367,7 +393,7 @@
                     <span class="text-2xl text-avjuris-cyan group-open:rotate-180 transition-transform duration-300">↓</span>
                 </summary>
                 <div class="pb-6 text-avjuris-prata text-sm leading-relaxed">
-                    A AvJuris é uma plataforma de inteligência artificial desenvolvida especialmente para advogados, escritórios de advocacia e departamentos jurídicos. Ela funciona como uma assistente jurídica virtual capaz de auxiliar na elaboração de documentos legais (como petições, pareceres, recursos) e na pesquisa avançada de jurisprudência. Com a AvJuris IA, profissionais do Direito podem automatizar tarefas repetitivas e reduzir o tempo de redação, focando na estratégia dos casos e no atendimento aos clientes.
+                    A AvJuris IA é uma plataforma de inteligência artificial desenvolvida especialmente para advogados, escritórios de advocacia e departamentos jurídicos. Ela funciona como uma assistente jurídica virtual capaz de auxiliar na elaboração de documentos legais (como petições, pareceres, recursos) e na pesquisa avançada de jurisprudência. Com a AvJuris IA, profissionais do Direito podem automatizar tarefas repetitivas e reduzir o tempo de redação, focando na estratégia dos casos e no atendimento aos clientes.
                 </div>
             </details>
 
@@ -377,13 +403,13 @@
                     <span class="text-2xl text-avjuris-cyan group-open:rotate-180 transition-transform duration-300">↓</span>
                 </summary>
                 <div class="pb-6 text-avjuris-prata text-sm leading-relaxed">
-                    A AvJuris utiliza algoritmos avançados e processamento de linguagem natural treinados especificamente em dados jurídicos brasileiros. Na prática, o advogado fornece à plataforma as informações básicas do caso e a IA analisa um vasto conjunto de leis e precedentes para gerar um texto jurídico coerente, denso e personalizado em minutos.
+                    A AvJuris IA utiliza algoritmos avançados e processamento de linguagem natural treinados especificamente em dados jurídicos brasileiros. Na prática, o advogado fornece à plataforma as informações básicas do caso e a IA analisa um vasto conjunto de leis e precedentes para gerar um texto jurídico coerente, denso e personalizado em minutos.
                 </div>
             </details>
 
             <details class="group border-b border-white/10 [&_summary::-webkit-details-marker]:hidden">
                 <summary class="flex items-center justify-between py-6 font-semibold text-lg cursor-pointer text-white hover:text-avjuris-cyan transition">
-                    Qual a diferença da inteligência artificial da AvJuris IA e ChatGPT ou Gemini?
+                    Qual a diferença da inteligência artificial da AvJuris IA e ChatGPT?
                     <span class="text-2xl text-avjuris-cyan group-open:rotate-180 transition-transform duration-300">↓</span>
                 </summary>
                 <div class="pb-6 text-avjuris-prata text-sm leading-relaxed">
@@ -397,7 +423,7 @@
 
             <details class="group border-b border-white/10 [&_summary::-webkit-details-marker]:hidden">
                 <summary class="flex items-center justify-between py-6 font-semibold text-lg cursor-pointer text-white hover:text-avjuris-cyan transition">
-                    A IA da AvJuris substitui o trabalho do advogado?
+                    A IA da AvJuris IA substitui o trabalho do advogado?
                     <span class="text-2xl text-avjuris-cyan group-open:rotate-180 transition-transform duration-300">↓</span>
                 </summary>
                 <div class="pb-6 text-avjuris-prata text-sm leading-relaxed">
@@ -416,9 +442,9 @@
                 </div>
                 <h3 class="text-3xl font-bold text-white mb-4">Como funciona a AvJuris IA?</h3>
                 <p class="text-avjuris-prata mb-8 text-sm leading-relaxed">Alcance resultados excepcionais: produza as melhores peças jurídicas, com uma IA treinada em direito brasileiro.</p>
-                <button onclick="loginComGoogle()" class="bg-avjuris-safira hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-bold text-sm uppercase tracking-wider transition inline-block cursor-pointer">
+                <a href="https://jurisprimeai.streamlit.app/" class="inline-block bg-avjuris-safira hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-bold text-sm uppercase tracking-wider transition cursor-pointer">
                     Teste Grátis e Sinta o Impacto
-                </button>
+                </a>
             </div>
             <div class="md:w-1/2 space-y-6">
                 <div class="flex gap-4 items-start">
@@ -444,30 +470,8 @@
         </div>
     </footer>
 
-    <!-- SCRIPT DE AUTENTICAÇÃO E CONTROLE DOS PLANOS -->
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <!-- CONTROLE DOS PLANOS (MENSAL / ANUAL) -->
     <script>
-        const supabaseUrl = 'https://imgnwxzhiocajqlcqqec.supabase.co'; 
-        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImltZ253eHpoaW9jYWpxbGNxcWVjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODcyNTk0NDUsImV4cCI6MjEwMjgzNTQ0NX0.2_16wQaCCsxBkSTJdcwCCeaOtPM0zLqfa2T7iNa_9uE'; 
-        const urlDeDestino = 'https://jurisprimeai.streamlit.app/'; 
-
-        const clienteSupabase = window.supabase.createClient(supabaseUrl, supabaseKey);
-
-        async function loginComGoogle() {
-            const { data, error } = await clienteSupabase.auth.signInWithOAuth({
-                provider: 'google',
-                options: {
-                    redirectTo: urlDeDestino
-                }
-            });
-
-            if (error) {
-                console.error("Erro no login corporativo: ", error.message);
-                alert("Ocorreu um erro ao tentar conectar com o Google. Verifique o console.");
-            }
-        }
-
-        // Lógica do Seletor Mensal / Anual
         let isAnual = false;
 
         function alternarPlanos() {
