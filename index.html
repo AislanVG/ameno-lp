@@ -194,12 +194,12 @@
             <!-- Toggle Mensal / Anual -->
             <div class="flex items-center justify-center gap-3 mt-8">
                 <span id="label-mensal" class="text-sm font-semibold text-white transition">Mensal</span>
-                <button type="button" id="pricing-toggle" onclick="alternarPlanos()" class="w-14 h-7 bg-white/10 rounded-full p-1 transition-colors duration-300 relative focus:outline-none border border-white/20">
+                <button type="button" id="pricing-toggle" onclick="alternarPlanos()" class="w-14 h-7 bg-white/10 rounded-full p-1 transition-colors duration-300 relative focus:outline-none border border-white/20 cursor-pointer">
                     <div id="toggle-circle" class="w-5 h-5 bg-avjuris-cyan rounded-full transition-transform duration-300 transform translate-x-0"></div>
                 </button>
                 <span id="label-anual" class="text-sm font-semibold text-avjuris-prata transition">Anual</span>
             </div>
-            <p id="economia-anual" class="text-xs text-avjuris-cyan mt-2 font-medium opacity-0 transition-opacity duration-300">Economize até R$ 599,76 no anual</p>
+            <p id="economia-anual" class="text-xs text-avjuris-cyan mt-2 font-medium opacity-0 transition-opacity duration-300">Economize até R$ 551,76 no anual</p>
         </div>
 
         <!-- Grid de Cards de Planos -->
@@ -223,7 +223,7 @@
                         <p id="preco-sub-1" class="text-[11px] text-avjuris-prata/70 mt-1">Economize até R$ 143,76 no anual</p>
                     </div>
 
-                    <a href="https://juris-prime-six.vercel.app/" class="block text-center w-full bg-white/5 border border-white/20 hover:bg-white/10 text-white py-3 rounded-lg font-bold text-sm transition mb-8 cursor-pointer">
+                    <a id="btn-plano-1" href="https://www.asaas.com/c/4l2fifl892xtvqjq" target="_blank" rel="noopener noreferrer" class="block text-center w-full bg-white/5 border border-white/20 hover:bg-white/10 text-white py-3 rounded-lg font-bold text-sm transition mb-8 cursor-pointer">
                         Assinar
                     </a>
 
@@ -269,7 +269,7 @@
                         <p id="preco-sub-2" class="text-[11px] text-avjuris-prata/70 mt-1">Economize até R$ 287,76 no anual</p>
                     </div>
 
-                    <a href="https://juris-prime-six.vercel.app/" class="block text-center w-full bg-avjuris-safira hover:bg-blue-600 text-white py-3 rounded-lg font-bold text-sm shadow-lg transition mb-8 cursor-pointer">
+                    <a id="btn-plano-2" href="https://www.asaas.com/c/jak9kzx44se9t69b" target="_blank" rel="noopener noreferrer" class="block text-center w-full bg-avjuris-safira hover:bg-blue-600 text-white py-3 rounded-lg font-bold text-sm shadow-lg transition mb-8 cursor-pointer">
                         Assinar
                     </a>
 
@@ -315,7 +315,7 @@
                         <p id="preco-sub-3" class="text-[11px] text-avjuris-prata/70 mt-1">Economize até R$ 551,76 no anual</p>
                     </div>
 
-                    <a href="https://juris-prime-six.vercel.app/" class="block text-center w-full bg-white/5 border border-white/20 hover:bg-white/10 text-white py-3 rounded-lg font-bold text-sm transition mb-8 cursor-pointer">
+                    <a id="btn-plano-3" href="https://www.asaas.com/c/bm3fu418xuhdf9uo" target="_blank" rel="noopener noreferrer" class="block text-center w-full bg-white/5 border border-white/20 hover:bg-white/10 text-white py-3 rounded-lg font-bold text-sm transition mb-8 cursor-pointer">
                         Assinar
                     </a>
 
@@ -470,9 +470,22 @@
         </div>
     </footer>
 
-    <!-- CONTROLE DOS PLANOS (MENSAL / ANUAL) -->
+    <!-- CONTROLE DINÂMICO DOS PLANOS E LINKS DO ASAAS -->
     <script>
         let isAnual = false;
+
+        const linksAsaas = {
+            mensal: {
+                basico: "https://www.asaas.com/c/4l2fifl892xtvqjq",
+                crescimento: "https://www.asaas.com/c/jak9kzx44se9t69b",
+                escala: "https://www.asaas.com/c/bm3fu418xuhdf9uo"
+            },
+            anual: {
+                basico: "https://www.asaas.com/c/zxs6xd58c349otut",
+                crescimento: "https://www.asaas.com/c/if37dj8q6gi79kgg",
+                escala: "https://www.asaas.com/c/ulxngbnp7czpvfhl"
+            }
+        };
 
         function alternarPlanos() {
             isAnual = !isAnual;
@@ -481,6 +494,10 @@
             const labelMensal = document.getElementById('label-mensal');
             const labelAnual = document.getElementById('label-anual');
             const ecoAnual = document.getElementById('economia-anual');
+
+            const btnPlano1 = document.getElementById('btn-plano-1');
+            const btnPlano2 = document.getElementById('btn-plano-2');
+            const btnPlano3 = document.getElementById('btn-plano-3');
 
             if (isAnual) {
                 circle.classList.remove('translate-x-0');
@@ -494,16 +511,19 @@
                 document.getElementById('preco-valor-1').innerText = 'R$ 47,92';
                 document.getElementById('preco-sub-1').innerText = 'Anual, com parcelas mensais';
                 document.getElementById('doc-qtd-1').innerHTML = 'Gere até <strong class="text-white">180 documentos</strong> no ano';
+                btnPlano1.href = linksAsaas.anual.basico;
 
                 document.getElementById('preco-original-2').classList.remove('hidden');
                 document.getElementById('preco-valor-2').innerText = 'R$ 95,92';
                 document.getElementById('preco-sub-2').innerText = 'Anual, com parcelas mensais';
                 document.getElementById('doc-qtd-2').innerHTML = 'Gere até <strong class="text-white">480 documentos</strong> no ano';
+                btnPlano2.href = linksAsaas.anual.crescimento;
 
                 document.getElementById('preco-original-3').classList.remove('hidden');
                 document.getElementById('preco-valor-3').innerText = 'R$ 183,92';
                 document.getElementById('preco-sub-3').innerText = 'Anual, com parcelas mensais';
                 document.getElementById('doc-qtd-3').innerHTML = 'Gere até <strong class="text-white">1.800 documentos</strong> no ano';
+                btnPlano3.href = linksAsaas.anual.escala;
             } else {
                 circle.classList.remove('translate-x-7');
                 circle.classList.add('translate-x-0');
@@ -511,21 +531,24 @@
                 labelAnual.classList.replace('text-white', 'text-avjuris-prata');
                 ecoAnual.classList.add('opacity-0');
 
-                // Preços Mensais
+                // Preços Mensais Padrão
                 document.getElementById('preco-original-1').classList.add('hidden');
                 document.getElementById('preco-valor-1').innerText = 'R$ 59,90';
                 document.getElementById('preco-sub-1').innerText = 'Economize até R$ 143,76 no anual';
                 document.getElementById('doc-qtd-1').innerHTML = 'Gere até <strong class="text-white">15 documentos</strong> por mês';
+                btnPlano1.href = linksAsaas.mensal.basico;
 
                 document.getElementById('preco-original-2').classList.add('hidden');
                 document.getElementById('preco-valor-2').innerText = 'R$ 119,90';
                 document.getElementById('preco-sub-2').innerText = 'Economize até R$ 287,76 no anual';
                 document.getElementById('doc-qtd-2').innerHTML = 'Gere até <strong class="text-white">40 documentos</strong> por mês';
+                btnPlano2.href = linksAsaas.mensal.crescimento;
 
                 document.getElementById('preco-original-3').classList.add('hidden');
                 document.getElementById('preco-valor-3').innerText = 'R$ 229,90';
                 document.getElementById('preco-sub-3').innerText = 'Economize até R$ 551,76 no anual';
                 document.getElementById('doc-qtd-3').innerHTML = 'Gere até <strong class="text-white">150 documentos</strong> por mês';
+                btnPlano3.href = linksAsaas.mensal.escala;
             }
         }
     </script>
